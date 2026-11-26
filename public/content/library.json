@@ -1,0 +1,1450 @@
+{
+  "schema": 1,
+  "version": "1.1.0",
+  "prayerCategories": {
+    "daily-practice": "Daily Practice",
+    "step-prayers": "Step Prayers",
+    "difficult-moments": "Difficult Moments",
+    "gratitude-acceptance": "Gratitude and Acceptance",
+    "service-guidance": "Service and Guidance"
+  },
+  "prayers": [
+    {
+      "id": "morning-prayer",
+      "title": "Morning Prayer",
+      "categories": [
+        "daily-practice",
+        "service-guidance"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God of this morning, open my ears before I speak and my hands before I grasp.",
+        "Let the work I do today be patient, honest, and useful. When I lose my way, help me begin again."
+      ],
+      "modern": [
+        "God, help me listen before I speak and relax my grip on how today has to go.",
+        "Help me be honest, patient, and useful. If I forget, remind me I can start over."
+      ],
+      "related": [
+        "upon-awakening",
+        "guidance-prayer",
+        "gratitude-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "evening-prayer",
+      "title": "Evening Prayer",
+      "categories": [
+        "daily-practice",
+        "gratitude-acceptance"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God of the quiet hours, thank you for the help I received today, including the help I barely noticed.",
+        "Give me eyes to see what needs repair and the humility to rest before I try to repair it."
+      ],
+      "modern": [
+        "God, thank you for the people and moments that helped me today.",
+        "Show me what I can put right. Let me rest and come back to it with a clearer mind."
+      ],
+      "related": [
+        "gratitude-prayer",
+        "pause-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "pause-prayer",
+      "title": "Pause Prayer",
+      "categories": [
+        "difficult-moments",
+        "daily-practice"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, make a little room in me between what I feel and what I do.",
+        "In that room, let me hear the wiser voice and ask for help."
+      ],
+      "modern": [
+        "God, help me slow down before I act on this feeling.",
+        "Give me enough space to listen and reach out."
+      ],
+      "related": [
+        "guidance-prayer",
+        "serenity-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "guidance-prayer",
+      "title": "Guidance Prayer",
+      "categories": [
+        "service-guidance",
+        "step-prayers"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, teach me to offer my effort without demanding its reward.",
+        "Let me see the honest work in front of me and have the willingness to do it."
+      ],
+      "modern": [
+        "God, help me do my part and let go of how it turns out.",
+        "Show me one honest thing I can do next, and help me do it."
+      ],
+      "related": [
+        "third-step-prayer",
+        "eleventh-step-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "gratitude-prayer",
+      "title": "Gratitude Prayer",
+      "categories": [
+        "gratitude-acceptance",
+        "daily-practice"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, turn my attention to the ordinary things that sustained me today.",
+        "May my gratitude become something I pass along, in the way I listen and in the time I make for others."
+      ],
+      "modern": [
+        "God, help me notice one small thing that carried me today.",
+        "Help me pass that care along by listening or making time for someone else."
+      ],
+      "related": [
+        "evening-prayer",
+        "morning-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "resentment-reflection",
+      "title": "Prayer for a Softer Response",
+      "categories": [
+        "difficult-moments",
+        "gratitude-acceptance"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, make me honest about what hurt and gentle about what I do with that hurt.",
+        "Help me keep the boundaries I need and release the argument I keep having in my head."
+      ],
+      "modern": [
+        "God, help me name what hurt without taking it out on someone.",
+        "Help me protect what needs protecting and set down the argument I keep replaying."
+      ],
+      "related": [
+        "resentment-prayer",
+        "pause-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "fear-reflection",
+      "title": "Prayer for the Next Small Step",
+      "categories": [
+        "difficult-moments",
+        "service-guidance"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, hold what I cannot settle today.",
+        "Give me enough courage for the task within reach and enough humility to ask someone to walk beside me."
+      ],
+      "modern": [
+        "God, help me leave tomorrow alone for a minute.",
+        "Give me courage for the next small step, and help me ask someone to take it with me."
+      ],
+      "related": [
+        "fear-prayer",
+        "guidance-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "humility-prayer",
+      "title": "Prayer for Willingness",
+      "categories": [
+        "step-prayers",
+        "service-guidance"
+      ],
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, show me what I keep defending because I am afraid to change.",
+        "Give me willingness before certainty and teach me to receive correction with care."
+      ],
+      "modern": [
+        "God, help me notice what I defend because change scares me.",
+        "Help me stay open to a different way, even when I feel unsure."
+      ],
+      "related": [
+        "seventh-step-prayer",
+        "guidance-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "listening-prayer",
+      "title": "Prayer for Listening",
+      "categories": [
+        "step-prayers",
+        "daily-practice"
+      ],
+      "step": 11,
+      "source": {
+        "title": "Daymark",
+        "rightsStatus": "original-daymark"
+      },
+      "original": [
+        "God, quiet the noise I carry into this moment. Help me listen until I can hear where I’m needed.",
+        "Give me the patience to wait when the way is unclear and the courage to carry out the good I can see."
+      ],
+      "modern": [
+        "God, help me slow down and listen. Show me one way I can be useful today.",
+        "Help me wait when I’m unsure and follow through when I see what to do."
+      ],
+      "related": [
+        "eleventh-step-prayer",
+        "guidance-prayer",
+        "morning-prayer"
+      ],
+      "editorialStatus": "daymark-preview"
+    },
+    {
+      "id": "third-step-prayer",
+      "title": "Third Step Prayer",
+      "categories": [
+        "step-prayers",
+        "service-guidance"
+      ],
+      "step": 3,
+      "source": {
+        "title": "Alcoholics Anonymous",
+        "edition": "Fourth edition",
+        "page": "63",
+        "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf",
+        "rightsStatus": "approved",
+        "credit": "Reprinted from Alcoholics Anonymous, Fourth Edition, p. 63, with permission of A.A. World Services, Inc."
+      },
+      "original": [
+        "God, I offer myself to Thee—to build with me and to do with me as Thou wilt. Relieve me of the bondage of self, that I may better do Thy will. Take away my difficulties, that victory over them may bear witness to those I would help of Thy Power, Thy Love, and Thy Way of life. May I do Thy will always!"
+      ],
+      "modern": null,
+      "related": [
+        "guidance-prayer"
+      ],
+      "editorialStatus": "published"
+    },
+    {
+      "id": "seventh-step-prayer",
+      "title": "Seventh Step Prayer",
+      "categories": [
+        "step-prayers"
+      ],
+      "step": 7,
+      "source": {
+        "title": "Alcoholics Anonymous",
+        "edition": "Fourth edition",
+        "page": "76",
+        "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+        "rightsStatus": "approved",
+        "credit": "Reprinted from Alcoholics Anonymous, Fourth Edition, p. 76, with permission of A.A. World Services, Inc."
+      },
+      "original": [
+        "My Creator, I am now willing that you should have all of me, good and bad. I pray that you now remove from me every single defect of character which stands in the way of my usefulness to you and my fellows. Grant me strength, as I go out from here, to do your bidding. Amen."
+      ],
+      "modern": null,
+      "related": [
+        "humility-prayer"
+      ],
+      "editorialStatus": "published"
+    },
+    {
+      "id": "eleventh-step-prayer",
+      "title": "Eleventh Step Prayer",
+      "categories": [
+        "step-prayers",
+        "daily-practice"
+      ],
+      "step": 11,
+      "source": {
+        "title": "Twelve Steps and Twelve Traditions",
+        "page": "99",
+        "url": "https://www.aa.org/sites/default/files/2022-01/en_step11.pdf",
+        "rightsStatus": "requires-review"
+      },
+      "original": null,
+      "modern": null,
+      "related": [
+        "listening-prayer",
+        "guidance-prayer",
+        "morning-prayer"
+      ],
+      "editorialStatus": "requires-review"
+    },
+    {
+      "id": "upon-awakening",
+      "title": "Upon Awakening",
+      "categories": [
+        "daily-practice"
+      ],
+      "step": null,
+      "source": {
+        "title": "Alcoholics Anonymous",
+        "edition": "Fourth edition",
+        "page": "86",
+        "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+        "rightsStatus": "approved",
+        "credit": "Reprinted from Alcoholics Anonymous, Fourth Edition, p. 86, with permission of A.A. World Services, Inc.",
+        "excerpt": true,
+        "note": "The full morning guidance continues on pages 86–88."
+      },
+      "original": [
+        "On awakening let us think about the twenty-four hours ahead. We consider our plans for the day."
+      ],
+      "modern": null,
+      "related": [
+        "morning-prayer"
+      ],
+      "editorialStatus": "published"
+    },
+    {
+      "id": "serenity-prayer",
+      "title": "Serenity Prayer",
+      "categories": [
+        "gratitude-acceptance",
+        "difficult-moments"
+      ],
+      "step": null,
+      "source": {
+        "title": "Serenity Prayer",
+        "url": "https://www.aa.org/origin-serenity-prayer-brief-summary",
+        "rightsStatus": "approved",
+        "credit": "Common short form, attributed to Reinhold Niebuhr."
+      },
+      "original": [
+        "God grant me the serenity to accept the things I cannot change, courage to change the things I can, and wisdom to know the difference."
+      ],
+      "modern": null,
+      "related": [
+        "pause-prayer",
+        "fear-reflection"
+      ],
+      "editorialStatus": "published"
+    },
+    {
+      "id": "resentment-prayer",
+      "title": "Resentment Prayer",
+      "categories": [
+        "difficult-moments"
+      ],
+      "step": 4,
+      "source": {
+        "title": "Alcoholics Anonymous",
+        "edition": "Fourth edition",
+        "page": "67",
+        "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf",
+        "rightsStatus": "approved",
+        "credit": "Reprinted from Alcoholics Anonymous, Fourth Edition, p. 67, with permission of A.A. World Services, Inc.",
+        "excerpt": true,
+        "note": "This line comes from the discussion of resentment in the Fourth Step inventory."
+      },
+      "original": [
+        "God save me from being angry."
+      ],
+      "modern": null,
+      "related": [
+        "resentment-reflection"
+      ],
+      "editorialStatus": "published"
+    },
+    {
+      "id": "fear-prayer",
+      "title": "Fear Prayer",
+      "categories": [
+        "difficult-moments"
+      ],
+      "step": 4,
+      "source": {
+        "title": "Alcoholics Anonymous",
+        "edition": "Fourth edition",
+        "page": "68",
+        "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf",
+        "rightsStatus": "approved",
+        "credit": "Reprinted from Alcoholics Anonymous, Fourth Edition, p. 68, with permission of A.A. World Services, Inc.",
+        "excerpt": true,
+        "note": "The passage describes a prayer for fear in the Fourth Step inventory."
+      },
+      "original": [
+        "We ask Him to remove our fear and direct our attention to what He would have us be."
+      ],
+      "modern": null,
+      "related": [
+        "fear-reflection"
+      ],
+      "editorialStatus": "published"
+    }
+  ],
+  "practices": [
+    {
+      "id": "morning",
+      "title": "Morning Reflection",
+      "short": "Begin with a little direction.",
+      "icon": "sunrise",
+      "tone": "amber",
+      "intro": "Give yourself a quiet moment before the day asks anything of you.",
+      "sections": [
+        {
+          "title": "Arrive",
+          "text": [
+            "Feel your feet on the floor. Notice what you are bringing into the morning. Take an unhurried breath and let the day begin where you are."
+          ]
+        },
+        {
+          "title": "Read",
+          "reading": "step-11-reading",
+          "text": [
+            "The morning practice in the Big Book invites us to consider the day ahead and ask for help with our motives and decisions. Think of one choice you are likely to face today."
+          ]
+        },
+        {
+          "title": "Ask for guidance",
+          "prayer": "morning-prayer",
+          "text": [
+            "Read slowly. Let one line stay with you as you move into the day."
+          ]
+        },
+        {
+          "title": "Choose an intention",
+          "text": [
+            "Pick one place where you can be more honest, kinder, or more willing to ask for help. Picture when you will practice it."
+          ]
+        },
+        {
+          "title": "Carry it with you",
+          "text": [
+            "If the day goes differently than you hoped, pause and begin from that moment. You can return to your intention as often as you need."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "evening",
+      "title": "Evening Reflection",
+      "short": "Look back with honesty and care.",
+      "icon": "moon",
+      "tone": "lavender",
+      "intro": "Take a few minutes to look at the day with the kindness you would offer a friend.",
+      "sections": [
+        {
+          "title": "Settle",
+          "text": [
+            "Let the day slow down. Notice your body on the chair or bed. Give yourself permission to leave some things unfinished tonight."
+          ]
+        },
+        {
+          "title": "Read",
+          "reading": "evening-review",
+          "text": [
+            "The evening review in the Big Book invites a calm look at the day, including where we owe an apology and where we could have been more helpful."
+          ]
+        },
+        {
+          "title": "Review gently",
+          "questions": [
+            "Where did I show up for someone today?",
+            "When did fear or resentment steer my choices?",
+            "Is there something I need to tell a trusted person?"
+          ]
+        },
+        {
+          "title": "Notice gratitude",
+          "text": [
+            "Bring to mind one ordinary thing you received today: a call, a meal, a little patience, a moment outside. Let yourself notice what it gave you."
+          ]
+        },
+        {
+          "title": "Consider repair",
+          "text": [
+            "If you owe a repair, name one thoughtful next step. Discuss it with your sponsor or a trusted peer before acting if contact could cause harm."
+          ]
+        },
+        {
+          "title": "Close the day",
+          "prayer": "evening-prayer",
+          "text": [
+            "Read the prayer, or use a few words of your own. Give yourself a chance to rest."
+          ]
+        }
+      ]
+    }
+  ],
+  "situations": [
+    {
+      "id": "resentment",
+      "title": "I’m feeling resentful",
+      "icon": "leaf",
+      "tone": "sage",
+      "grounding": "It can take a lot of energy to replay something that hurt. Give yourself a few quiet minutes before you decide what to do.",
+      "principle": "Honesty and perspective. Name the harm and notice what is yours to handle today. Keeping a boundary can be part of that.",
+      "prayers": [
+        "resentment-reflection",
+        "pause-prayer"
+      ],
+      "reading": "step-4-reading",
+      "actions": [
+        "Set aside the reply you are composing, if it can safely wait.",
+        "Describe what happened in one sentence. Then name the feeling it brought up.",
+        "Ask yourself what would help you respond in a way you can live with tomorrow."
+      ],
+      "connection": "Talk it through with your sponsor or a trusted peer before reacting. Ask them to help you sort a useful boundary from the urge to get even.",
+      "urgent": false
+    },
+    {
+      "id": "fear",
+      "title": "I’m afraid or anxious",
+      "icon": "sunrise",
+      "tone": "lavender",
+      "grounding": "You can feel afraid and still take one small step. Start by noticing one thing you can see and the support beneath your feet.",
+      "principle": "Courage. Name the fear, then look for one action within reach.",
+      "prayers": [
+        "fear-reflection",
+        "pause-prayer"
+      ],
+      "reading": "step-4-reading",
+      "actions": [
+        "Name the specific outcome you are afraid of.",
+        "Separate what you know from what you are imagining.",
+        "Choose one step you can take in the next ten minutes."
+      ],
+      "connection": "Tell someone you trust exactly what you are afraid might happen. Ask them to stay with you while you decide what to do.",
+      "urgent": false
+    },
+    {
+      "id": "urge",
+      "title": "I’m struggling with an urge to drink or use",
+      "icon": "phone",
+      "tone": "clay",
+      "grounding": "Call someone you trust now. Move somewhere safer if you can.",
+      "principle": "Connection. Say plainly what is happening and let someone help you through the next few minutes.",
+      "prayers": [
+        "pause-prayer",
+        "fear-reflection"
+      ],
+      "reading": "step-1-reading",
+      "actions": [
+        "Call your sponsor, a trusted person, or a recovery peer. Say “I’m having an urge and I need someone with me.”",
+        "If the first person is unavailable, try the next person or use a crisis line for live support.",
+        "Ask a sober person to help you get somewhere safer or stay with you. If you have used, avoid driving."
+      ],
+      "connection": "Read or pray while you wait for a reply if that helps. Keep reaching for live support.",
+      "urgent": true,
+      "detailTitle": "An urge to drink or use"
+    },
+    {
+      "id": "anger",
+      "title": "I’m angry or frustrated",
+      "icon": "pause",
+      "tone": "clay",
+      "grounding": "Give the anger a little room. Try uncurling your hands or taking a step away from the conversation if that is safe.",
+      "principle": "Restraint. Delay a reply long enough to hear what the anger is asking for.",
+      "prayers": [
+        "pause-prayer",
+        "resentment-reflection"
+      ],
+      "reading": "step-10-reading",
+      "actions": [
+        "Put your phone down and take a short break from the exchange.",
+        "Name what you need in plain language, such as space, respect, or clarity.",
+        "When you are ready, ask directly for what you need."
+      ],
+      "connection": "Call someone who can listen and help you decide when it is safe and useful to return to the conversation.",
+      "urgent": false
+    },
+    {
+      "id": "overwhelm",
+      "title": "I’m overwhelmed",
+      "icon": "leaf",
+      "tone": "sage",
+      "grounding": "Put one task down and let the next minute be small. A sip of water or a seat can be a starting point.",
+      "principle": "Simplicity. Give your attention to what needs care first.",
+      "prayers": [
+        "fear-reflection",
+        "guidance-prayer"
+      ],
+      "reading": "step-11-reading",
+      "actions": [
+        "Name the one thing that genuinely needs attention now.",
+        "Pick something that can wait until tomorrow.",
+        "Ask for help with one task instead of carrying it by yourself."
+      ],
+      "connection": "Text someone a simple request, like “Could I talk for a few minutes while I figure out what needs doing first?”",
+      "urgent": false
+    },
+    {
+      "id": "loneliness",
+      "title": "I’m feeling lonely",
+      "icon": "people",
+      "tone": "lavender",
+      "grounding": "Feeling far from other people can hurt. A small point of contact is enough to begin.",
+      "principle": "Fellowship. Let someone hear your voice, or make room to hear theirs.",
+      "prayers": [
+        "morning-prayer",
+        "gratitude-prayer"
+      ],
+      "reading": "step-12-reading",
+      "actions": [
+        "Send a short hello to someone from a meeting.",
+        "Consider a meeting, a walk with a friend, or a call to a trusted person.",
+        "If speaking feels hard, ask someone if you can just listen for a while."
+      ],
+      "connection": "Try saying “I could use some company today.” You can share as much as you feel ready to share.",
+      "urgent": false
+    },
+    {
+      "id": "shame",
+      "title": "I’m struggling with guilt or shame",
+      "icon": "heart",
+      "tone": "clay",
+      "grounding": "Give yourself time to tell the truth kindly. Start with what happened and how it affected you or someone else.",
+      "principle": "Accountability with compassion. You can face a mistake and still deserve help.",
+      "prayers": [
+        "evening-prayer",
+        "humility-prayer"
+      ],
+      "reading": "step-5-reading",
+      "actions": [
+        "Name the action that troubles you in one factual sentence.",
+        "Ask what responsibility is yours and what support you need.",
+        "Wait to contact anyone you may have harmed until you have talked through the consequences."
+      ],
+      "connection": "Ask a safe, trusted person to listen. If you feel at risk of harming yourself, reach emergency or crisis support now.",
+      "urgent": true,
+      "detailTitle": "Guilt or shame"
+    },
+    {
+      "id": "acceptance",
+      "title": "I’m having trouble accepting something",
+      "icon": "sunrise",
+      "tone": "amber",
+      "grounding": "Some things take time to accept. Start by naming what is already true today.",
+      "principle": "Acceptance. Face the facts and use your energy where you still have a choice.",
+      "prayers": [
+        "serenity-prayer",
+        "gratitude-prayer"
+      ],
+      "reading": "step-3-reading",
+      "actions": [
+        "Describe what has already happened in plain terms.",
+        "Choose one part of your response you can influence.",
+        "Give yourself permission to grieve or feel angry while you take that step."
+      ],
+      "connection": "Ask your sponsor or a trusted peer what they hear when you describe the situation. They may see an option you are too close to notice.",
+      "urgent": false
+    },
+    {
+      "id": "decision",
+      "title": "I need to make a difficult decision",
+      "icon": "sun",
+      "tone": "amber",
+      "grounding": "If you have time, give the decision some breathing room. A pause can make it easier to hear your own judgment.",
+      "principle": "Willingness. Ask for direction and consider who might be affected by the choice.",
+      "prayers": [
+        "guidance-prayer",
+        "morning-prayer"
+      ],
+      "reading": "step-11-reading",
+      "actions": [
+        "Identify the decision and when it actually needs to be made.",
+        "Name the choice that fits your values, even if it is uncomfortable.",
+        "Review your options with someone who can listen without deciding for you."
+      ],
+      "connection": "Ask a sponsor or trusted person to help you think through your motives and the likely effects of each choice.",
+      "urgent": false
+    },
+    {
+      "id": "perspective",
+      "title": "I just need some perspective",
+      "icon": "sunrise",
+      "tone": "sage",
+      "grounding": "Step back from the part of the day that is taking up all the room. There may be more to the picture.",
+      "principle": "Gratitude. Notice what is steady, what is changing, and where you can be useful.",
+      "prayers": [
+        "gratitude-prayer",
+        "guidance-prayer"
+      ],
+      "reading": "step-12-reading",
+      "actions": [
+        "Describe what is happening as if you were telling a friend.",
+        "Notice one person, place, or practice that has helped you lately.",
+        "Choose one small thing you can do to care for yourself or someone else."
+      ],
+      "connection": "Ask someone you trust how they have handled a similar day. Listen for one thing you could try.",
+      "urgent": false
+    }
+  ],
+  "steps": [
+    {
+      "id": "step-1",
+      "number": 1,
+      "title": "Honesty about alcohol",
+      "principle": "Honesty and acceptance",
+      "intro": "Look at what happens once drinking begins and how it has affected your life. Honest examples can help you decide what support you need now.",
+      "reading": "step-1-reading",
+      "questions": [
+        "Where did I try to manage drinking on my own?",
+        "What happened when I made rules about when or how much I could drink?"
+      ],
+      "exercises": [
+        "Work through one recent episode with your sponsor. Begin before the first drink and follow through to the next day. Notice where asking for help might fit."
+      ],
+      "prayers": [
+        "fear-reflection"
+      ],
+      "worksheets": [],
+      "related": [
+        "getting-started"
+      ]
+    },
+    {
+      "id": "step-2",
+      "number": 2,
+      "title": "Opening to help",
+      "principle": "Hope and open-mindedness",
+      "intro": "Explore where help might come from beyond your own familiar efforts. A group, a spiritual understanding, or the example of people in recovery may give you a place to begin.",
+      "reading": "step-2-reading",
+      "questions": [
+        "Whose recovery gives me reason to hope?",
+        "What kind of help could I become willing to accept?"
+      ],
+      "exercises": [
+        "Choose a person whose recovery you respect and ask what helped them stay open early on."
+      ],
+      "prayers": [
+        "humility-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "getting-started"
+      ]
+    },
+    {
+      "id": "step-3",
+      "number": 3,
+      "title": "Choosing a direction",
+      "principle": "Trust and willingness",
+      "intro": "Make a decision to seek guidance in how you live. Discuss what turning over a decision means in practice and how you will follow it with action.",
+      "reading": "step-3-reading",
+      "questions": [
+        "Where am I trying to control an outcome I cannot control?",
+        "What does a decision to seek guidance look like in my own language?"
+      ],
+      "exercises": [
+        "Choose one decision to discuss with a sponsor. Name the part you can do, then practice letting other people make their own choices."
+      ],
+      "prayers": [
+        "third-step-prayer",
+        "guidance-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "getting-started"
+      ]
+    },
+    {
+      "id": "step-4",
+      "number": 4,
+      "title": "Taking inventory",
+      "principle": "Courage and self-honesty",
+      "intro": "A structured inventory can reveal recurring resentments, fears, and conduct patterns. Work at a pace agreed with your sponsor and keep your written notes somewhere private.",
+      "reading": "step-4-reading",
+      "questions": [
+        "What am I hesitant to put into words?",
+        "What patterns show up across different people or situations?",
+        "Where do I need to distinguish harm done to me from actions I can take responsibility for?"
+      ],
+      "exercises": [
+        "Agree on a manageable amount before you begin. Try one resentment, one fear, and one relationship example. Look for a repeating response or need, then discuss it with your sponsor."
+      ],
+      "prayers": [
+        "resentment-reflection",
+        "fear-reflection"
+      ],
+      "worksheets": [
+        "resentment-inventory",
+        "fear-inventory",
+        "conduct-inventory"
+      ],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-5",
+      "number": 5,
+      "title": "Sharing the inventory",
+      "principle": "Trust and accountability",
+      "intro": "Speak honestly about what you discovered with a carefully chosen person. Agree on privacy, time, and breaks before you share.",
+      "reading": "step-5-reading",
+      "questions": [
+        "Who can listen with care and keep a confidence?",
+        "What feels hardest to say out loud?"
+      ],
+      "exercises": [
+        "Set aside an unhurried time. Talk about confidentiality and boundaries before beginning. Ask for a break if you need one."
+      ],
+      "prayers": [
+        "humility-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-6",
+      "number": 6,
+      "title": "Becoming ready",
+      "principle": "Willingness and patience",
+      "intro": "Notice the habits you still lean on when you feel threatened, and consider what it would take to let those habits change.",
+      "reading": "step-6-reading",
+      "questions": [
+        "What familiar behavior still feels protective?",
+        "What would willingness look like before I feel ready?"
+      ],
+      "exercises": [
+        "Pick one recurring behavior. Talk through what it does for you and name a different response you could practice this week."
+      ],
+      "prayers": [
+        "humility-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-7",
+      "number": 7,
+      "title": "Asking for change",
+      "principle": "Humility and practice",
+      "intro": "Ask for help with a shortcoming that keeps hurting you or others. Give that request shape by practicing a different action in a familiar situation.",
+      "reading": "step-7-reading",
+      "questions": [
+        "What change am I willing to ask for today?",
+        "Who sees this pattern clearly enough to give me honest feedback?"
+      ],
+      "exercises": [
+        "Before a situation where the pattern usually appears, ask for help and choose one alternative action. Check in afterward."
+      ],
+      "prayers": [
+        "seventh-step-prayer",
+        "humility-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-8",
+      "number": 8,
+      "title": "Preparing for repair",
+      "principle": "Responsibility and willingness",
+      "intro": "Identify the people affected by your actions. Consider the harm with care, then talk through possible repairs before making contact.",
+      "reading": "step-8-reading",
+      "questions": [
+        "Who felt the effects of what I did?",
+        "Where do I feel willing to make repair, and where do I feel stuck?"
+      ],
+      "exercises": [
+        "Make a private list on paper and review it with a sponsor. Identify practical repair, safety concerns, and cases that need more guidance."
+      ],
+      "prayers": [
+        "guidance-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-9",
+      "number": 9,
+      "title": "Making amends",
+      "principle": "Care and restitution",
+      "intro": "Take responsibility in ways that serve the person affected. Think through timing, safety, and consequences with your sponsor before approaching anyone.",
+      "reading": "step-9-reading",
+      "questions": [
+        "What repair would be useful to the other person?",
+        "Could direct contact cause harm or disregard someone’s boundaries?"
+      ],
+      "exercises": [
+        "Rehearse one amends with your sponsor. Include the action and possible repair. Respect a person’s choice to decline contact."
+      ],
+      "prayers": [
+        "guidance-prayer",
+        "pause-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-10",
+      "number": 10,
+      "title": "Checking in as you go",
+      "principle": "Awareness and prompt repair",
+      "intro": "Pay attention when an old response appears. When you have done harm, acknowledge it and act on what can be put right.",
+      "reading": "step-10-reading",
+      "questions": [
+        "What repeated itself today?",
+        "What can I acknowledge or repair promptly?"
+      ],
+      "exercises": [
+        "Try a brief pause after a tense interaction. Name what happened, ask for help if needed, and consider a reasonable repair."
+      ],
+      "prayers": [
+        "pause-prayer",
+        "evening-prayer"
+      ],
+      "worksheets": [
+        "evening-check-in"
+      ],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-11",
+      "number": 11,
+      "title": "Making time for guidance",
+      "principle": "Reflection and spiritual connection",
+      "intro": "Set aside a little space for prayer, meditation, or quiet reflection. Try a practice you can return to in daily life.",
+      "reading": "step-11-reading",
+      "questions": [
+        "When is it easiest to get quiet?",
+        "What helps me listen before acting on a decision?"
+      ],
+      "exercises": [
+        "Try the morning or evening reflection for a few days. Discuss with your sponsor where the practice helped you notice a choice."
+      ],
+      "prayers": [
+        "listening-prayer",
+        "eleventh-step-prayer",
+        "morning-prayer",
+        "evening-prayer"
+      ],
+      "worksheets": [
+        "evening-check-in"
+      ],
+      "related": [
+        "sponsor-conversation"
+      ]
+    },
+    {
+      "id": "step-12",
+      "number": 12,
+      "title": "Carrying recovery forward",
+      "principle": "Service and integrity",
+      "intro": "Share your own recovery experience when it is welcome, and look for places to practice the principles in ordinary relationships.",
+      "reading": "step-12-reading",
+      "questions": [
+        "What service am I able to offer consistently?",
+        "Where can I practice the principles away from meetings?"
+      ],
+      "exercises": [
+        "Choose one manageable act of service. Ask what is actually needed and follow through on what you offer."
+      ],
+      "prayers": [
+        "gratitude-prayer",
+        "guidance-prayer"
+      ],
+      "worksheets": [],
+      "related": [
+        "sponsor-conversation"
+      ]
+    }
+  ],
+  "readings": [
+    {
+      "id": "step-1-reading",
+      "title": "More About Alcoholism",
+      "step": 1,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "More About Alcoholism, pp. 30–43",
+      "url": "https://www.aa.org/the-big-book",
+      "instructions": "Read for examples of returning to a drink after promising to stop. Bring one passage and one experience of your own to discuss.",
+      "questions": [
+        "Where did I try to manage drinking on my own?",
+        "What happened when I made rules about when or how much I could drink?"
+      ],
+      "related": [
+        "step-1"
+      ]
+    },
+    {
+      "id": "step-2-reading",
+      "title": "We Agnostics",
+      "step": 2,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "We Agnostics, pp. 44–57",
+      "url": "https://www.aa.org/the-big-book",
+      "instructions": "Read at your own pace. Mark places that invite you to consider a different possibility, including places you disagree with.",
+      "questions": [
+        "Whose recovery gives me reason to hope?",
+        "What kind of help could I become willing to accept?"
+      ],
+      "related": [
+        "step-2"
+      ]
+    },
+    {
+      "id": "step-3-reading",
+      "title": "Step 3 reading",
+      "step": 3,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "How It Works, pp. 60–63",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf",
+      "instructions": "Read the lead-in to the Third Step Prayer. Think about how the decision could show up in one ordinary responsibility.",
+      "questions": [
+        "Where am I trying to control an outcome I cannot control?",
+        "What does a decision to seek guidance look like in my own language?"
+      ],
+      "related": [
+        "step-3"
+      ]
+    },
+    {
+      "id": "step-4-reading",
+      "title": "Step 4 reading",
+      "step": 4,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "How It Works, pp. 63–71",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf",
+      "instructions": "Read the inventory examples before choosing a format. Notice where the text moves from describing events to examining repeated responses.",
+      "questions": [
+        "What am I hesitant to put into words?",
+        "What patterns show up across different people or situations?",
+        "Where do I need to distinguish harm done to me from actions I can take responsibility for?"
+      ],
+      "related": [
+        "step-4"
+      ]
+    },
+    {
+      "id": "step-5-reading",
+      "title": "Step 5 reading",
+      "step": 5,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 72–75",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the discussion of choosing a listener and preparing to speak candidly. Identify what would help you feel able to be truthful.",
+      "questions": [
+        "Who can listen with care and keep a confidence?",
+        "What feels hardest to say out loud?"
+      ],
+      "related": [
+        "step-5"
+      ]
+    },
+    {
+      "id": "step-6-reading",
+      "title": "Step 6 reading",
+      "step": 6,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 75–76",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the transition from sharing inventory to asking for change. Think about a pattern you have defended and what it has cost.",
+      "questions": [
+        "What familiar behavior still feels protective?",
+        "What would willingness look like before I feel ready?"
+      ],
+      "related": [
+        "step-6"
+      ]
+    },
+    {
+      "id": "step-7-reading",
+      "title": "Step 7 reading",
+      "step": 7,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 76",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the Seventh Step passage. Discuss what it means to be useful while still learning.",
+      "questions": [
+        "What change am I willing to ask for today?",
+        "Who sees this pattern clearly enough to give me honest feedback?"
+      ],
+      "related": [
+        "step-7"
+      ]
+    },
+    {
+      "id": "step-8-reading",
+      "title": "Step 8 reading",
+      "step": 8,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 76–77",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the transition into amends. Consider where your inventory already names damage you can acknowledge.",
+      "questions": [
+        "Who felt the effects of what I did?",
+        "Where do I feel willing to make repair, and where do I feel stuck?"
+      ],
+      "related": [
+        "step-8"
+      ]
+    },
+    {
+      "id": "step-9-reading",
+      "title": "Step 9 reading",
+      "step": 9,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 76–84",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the examples of different kinds of amends. Discuss what the repair serves and who might be affected by contact.",
+      "questions": [
+        "What repair would be useful to the other person?",
+        "Could direct contact cause harm or disregard someone’s boundaries?"
+      ],
+      "related": [
+        "step-9"
+      ]
+    },
+    {
+      "id": "step-10-reading",
+      "title": "Step 10 reading",
+      "step": 10,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 84–85",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the daily inventory passage. Look for the sequence from noticing a reaction to discussing it and turning toward a useful action.",
+      "questions": [
+        "What repeated itself today?",
+        "What can I acknowledge or repair promptly?"
+      ],
+      "related": [
+        "step-10"
+      ]
+    },
+    {
+      "id": "step-11-reading",
+      "title": "Step 11 reading",
+      "step": 11,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, pp. 85–88",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the guidance for the beginning and end of the day. Choose one practice to try at a time that fits your life.",
+      "questions": [
+        "When is it easiest to get quiet?",
+        "What helps me listen before acting on a decision?"
+      ],
+      "related": [
+        "step-11"
+      ]
+    },
+    {
+      "id": "step-12-reading",
+      "title": "Working With Others",
+      "step": 12,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Working With Others, pp. 89–103",
+      "url": "https://www.aa.org/the-big-book",
+      "instructions": "Read for ways to offer help while respecting another person’s decisions. Notice what the chapter suggests about listening and sharing experience.",
+      "questions": [
+        "What service am I able to offer consistently?",
+        "Where can I practice the principles away from meetings?"
+      ],
+      "related": [
+        "step-12"
+      ]
+    },
+    {
+      "id": "evening-review",
+      "title": "A review at day’s end",
+      "step": 11,
+      "source": "Alcoholics Anonymous · Fourth edition",
+      "reference": "Into Action, p. 86",
+      "url": "https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf",
+      "instructions": "Read the evening review slowly. Choose one question about the day and sit with it before considering any response.",
+      "questions": [
+        "Where did I offer or receive help today?",
+        "What would be useful to put right tomorrow?"
+      ],
+      "related": [
+        "step-11",
+        "evening-check-in"
+      ]
+    }
+  ],
+  "worksheets": [
+    {
+      "id": "resentment-inventory",
+      "title": "Resentment inventory",
+      "step": 4,
+      "intro": "Use one sheet for one situation. Start with facts, then explore the feelings and responses. If someone harmed you, take care to distinguish their actions from your own.",
+      "fields": [
+        [
+          "Who or what am I resentful toward?",
+          "Name the person, situation, or institution."
+        ],
+        [
+          "What happened?",
+          "Describe the event in plain terms."
+        ],
+        [
+          "What felt affected?",
+          "Consider security, self-respect, relationships, or plans."
+        ],
+        [
+          "How did I respond?",
+          "Notice patterns, boundaries, and choices within your control."
+        ],
+        [
+          "What can I discuss with my sponsor?",
+          "Name one question or next action."
+        ]
+      ]
+    },
+    {
+      "id": "fear-inventory",
+      "title": "Fear inventory",
+      "step": 4,
+      "intro": "Begin with a specific fear you are comfortable exploring. Discuss the format and pace with your sponsor.",
+      "fields": [
+        [
+          "What am I afraid of?",
+          "Name the outcome you fear."
+        ],
+        [
+          "What brings this fear up?",
+          "Consider facts, memories, and assumptions."
+        ],
+        [
+          "What do I do when I feel it?",
+          "Look for avoidance, control, or attempts to handle it alone."
+        ],
+        [
+          "Where could I seek help?",
+          "Name a person, a spiritual practice, or a practical next step."
+        ]
+      ]
+    },
+    {
+      "id": "conduct-inventory",
+      "title": "Sex and conduct inventory",
+      "step": 4,
+      "intro": "Review conduct in a relationship or encounter at a pace you choose. Focus on your choices. A violation or abuse by someone else is their responsibility.",
+      "fields": [
+        [
+          "What was the situation?",
+          "Use as much detail as you need to understand your own conduct."
+        ],
+        [
+          "How did I act?",
+          "Consider honesty, consent, boundaries, and care."
+        ],
+        [
+          "Who was affected and how?",
+          "Think about consequences without guessing at another person’s feelings."
+        ],
+        [
+          "How would I like to act today?",
+          "Name a boundary, value, or behavior you want to practice."
+        ],
+        [
+          "What needs discussion before action?",
+          "Consult your sponsor and appropriate support before attempting a repair."
+        ]
+      ]
+    },
+    {
+      "id": "evening-check-in",
+      "title": "Evening check-in",
+      "step": 10,
+      "intro": "Use this page privately if writing helps you reflect. Answer only the questions that are useful today.",
+      "fields": [
+        [
+          "What went well?",
+          "Name an action you appreciate or help you received."
+        ],
+        [
+          "What needs attention?",
+          "Notice a reaction, a worry, or a conversation you need to have."
+        ],
+        [
+          "What can I do next?",
+          "Choose a reasonable repair or a person to talk with."
+        ]
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "id": "getting-started",
+      "category": "getting-started",
+      "title": "Your first sponsorship conversation",
+      "intro": "Agree on what you each need and can offer.",
+      "sections": [
+        {
+          "title": "Before you meet",
+          "items": [
+            "Ask how and when you can reach each other.",
+            "Talk about meeting frequency and how you prefer to read or discuss assignments.",
+            "Agree on privacy and what to do if either of you needs a different arrangement."
+          ]
+        },
+        {
+          "title": "Before you leave",
+          "text": [
+            "Choose one realistic next step and a time to check in. Keep urgent support options available alongside your regular contact plan."
+          ]
+        }
+      ],
+      "related": [
+        "sponsorship-principles",
+        "step-1"
+      ]
+    },
+    {
+      "id": "sponsor-conversation",
+      "category": "discussion-guides",
+      "title": "A practical sponsor check-in",
+      "intro": "A short guide for making the most of a conversation.",
+      "sections": [
+        {
+          "title": "Begin with what matters today",
+          "items": [
+            "What feels most important to talk about right now?",
+            "What did you learn from the assignment or practice?",
+            "Where did you ask for help, or where could you try asking?"
+          ]
+        },
+        {
+          "title": "Agree on a next step",
+          "text": [
+            "Reflect back what you heard. Invite the other person to choose a specific action and decide when to follow up."
+          ]
+        }
+      ],
+      "related": [
+        "getting-started",
+        "sponsorship-principles"
+      ]
+    },
+    {
+      "id": "sponsorship-principles",
+      "category": "sponsorship-principles",
+      "title": "Sponsorship with care and boundaries",
+      "intro": "Share experience, respect autonomy, and make room for other support.",
+      "sections": [
+        {
+          "title": "Share from experience",
+          "text": [
+            "Describe what helped you and invite questions. People work the Steps in different ways. Make room for someone to ask for another viewpoint."
+          ]
+        },
+        {
+          "title": "Keep clear boundaries",
+          "items": [
+            "Agree on availability and confidentiality and revisit them when circumstances change.",
+            "Encourage a wider network of peers and appropriate professional care.",
+            "Respect each person’s decisions, relationships, and spiritual language."
+          ]
+        }
+      ],
+      "related": [
+        "getting-started",
+        "sponsor-conversation"
+      ],
+      "source": {
+        "title": "Questions & Answers on Sponsorship · A.A.W.S.",
+        "url": "https://www.aa.org/sites/default/files/literature/P-15_0625.pdf"
+      }
+    }
+  ],
+  "toolkitGroups": [
+    {
+      "id": "getting-started",
+      "title": "Getting Started",
+      "description": "Begin a sponsorship relationship.",
+      "icon": "people",
+      "tone": "sage"
+    },
+    {
+      "id": "steps",
+      "title": "Working the Twelve Steps",
+      "description": "Find a guide for each step.",
+      "icon": "leaf",
+      "tone": "sage"
+    },
+    {
+      "id": "readings",
+      "title": "Reading Assignments",
+      "description": "Literature references to share and discuss.",
+      "icon": "book",
+      "tone": "amber"
+    },
+    {
+      "id": "worksheets",
+      "title": "Worksheets",
+      "description": "Guided prompts for private work.",
+      "icon": "file",
+      "tone": "clay"
+    },
+    {
+      "id": "discussion-guides",
+      "title": "Discussion Guides",
+      "description": "Questions for a focused conversation.",
+      "icon": "people",
+      "tone": "lavender"
+    },
+    {
+      "id": "sponsorship-principles",
+      "title": "Sponsorship Principles",
+      "description": "Share experience with care and respect.",
+      "icon": "heart",
+      "tone": "sage"
+    },
+    {
+      "id": "printables",
+      "title": "Printable Resources",
+      "description": "Worksheets ready for paper.",
+      "icon": "print",
+      "tone": "amber"
+    }
+  ],
+  "references": {
+    "steps": "https://www.aa.org/the-twelve-steps",
+    "crisis": "https://www.samhsa.gov/find-support/in-crisis"
+  }
+}
