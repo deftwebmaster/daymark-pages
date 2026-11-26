@@ -1,10 +1,10 @@
 // Increment CACHE_VERSION for each deployed change to an app shell file or the content.
-const CACHE_VERSION = '1.1.0-1';
+const CACHE_VERSION = '1.1.0-2';
 const scope = self.registration.scope;
 const prefix = `daymark:${scope}:`;
 const cacheName = prefix + CACHE_VERSION;
 const shell = [
-  'index.html', 'offline.html', 'manifest.webmanifest', 'css/app.css',
+  '', 'offline.html', 'manifest.webmanifest', 'css/app.css',
   'assets/icons/mark.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
   'assets/icons/maskable-512.png', 'assets/icons/apple-touch.png', 'assets/images/daybreak.jpg',
   'assets/icons/steponeart-mountains.webp',
@@ -15,7 +15,8 @@ const shell = [
   'js/modules/toolkit.js', 'js/modules/settings.js', 'content/library.json',
 ];
 const assetURLs = new Set(shell.map(path => new URL(path, scope).href));
-const entryURL = new URL('index.html', scope).href;
+const indexPath = new URL('index.html', scope).pathname;
+const entryPath = new URL(scope).pathname;
 const offlineURL = new URL('offline.html', scope).href;
 
 self.addEventListener('install', event => {
@@ -45,12 +46,19 @@ self.addEventListener('fetch', event => {
     event.respondWith((async () => {
       const cache = await caches.open(cacheName);
       const url = new URL(request.url);
-      if (url.pathname === new URL(scope).pathname || url.pathname === new URL(entryURL).pathname) {
-        const entry = await cache.match(entryURL);
+      if (url.pathname === entryPath || url.pathname === indexPath) {
+        const entry = await cache.match(scope);
         if (entry) return entry;
       }
       try { return await fetch(request); }
-      catch { return (await cache.match(offlineURL)) || Response.error(); }
+      catch {
+        const offline = await cache.match(offlineURL);
+        if (!offline) return Response.error();
+        // Pages may redirect offline.html. Navigation requests cannot reuse a followed redirect.
+        return offline.redirected ? new Response(offline.body, {
+          status: offline.status, statusText: offline.statusText, headers: offline.headers,
+        }) : offline;
+      }
     })());
     return;
   }

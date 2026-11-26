@@ -29,7 +29,7 @@ The chosen local date counts as zero. An integer Gregorian ordinal gives elapsed
 
 ## PWA
 
-Install precaches the complete release in a cache keyed by scope and version. The worker serves the HTML entry point and its static assets from that cache to keep the shell and content on the same release. The fallback page handles other navigation in scope when the network is unavailable. Unlisted requests use the network. The app does not cache external pages or place personal data in Cache Storage.
+Install precaches the complete release in a cache keyed by scope and version. The worker caches the HTML entry point by its directory URL so the Pages redirect from `index.html` works with offline navigation. It serves the entry point and static assets from the same cache to keep the shell and content on the same release. The fallback page handles other navigation in scope when the network is unavailable. Unlisted requests use the network. The app does not cache external pages or place personal data in Cache Storage.
 
 A new worker remains waiting while the current worker serves installed clients. The app displays **Reload to update** when the worker has cached the new release. Selecting it sends an activation message and reloads that tab after the controller changes. Activation removes old Daymark caches in the same scope and leaves IndexedDB intact. Other open tabs continue showing their current page and receive the new files when reloaded. Every deployment that changes the shell or library must use a new cache version.
 
