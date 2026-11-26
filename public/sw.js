@@ -1,5 +1,5 @@
 // Increment CACHE_VERSION for each deployed change to an app shell file or the content.
-const CACHE_VERSION = '1.2.0-1';
+const CACHE_VERSION = '1.4.0-3';
 const scope = self.registration.scope;
 const prefix = `daymark:${scope}:`;
 const cacheName = prefix + CACHE_VERSION;
@@ -12,7 +12,8 @@ const shell = [
   'js/theme.js', 'js/config.js', 'js/app.js', 'js/registry.js',
   'js/core/content.js', 'js/core/dates.js', 'js/core/storage.js', 'js/core/ui.js',
   'js/modules/today.js', 'js/modules/prayers.js', 'js/modules/recovery.js',
-  'js/modules/toolkit.js', 'js/modules/settings.js', 'content/library.json',
+  'js/modules/toolkit.js', 'js/modules/settings.js', 'js/modules/meeting-spark.js',
+  'js/modules/share-timer.js', 'content/library.json',
 ];
 const assetURLs = new Set(shell.map(path => new URL(path, scope).href));
 const indexPath = new URL('index.html', scope).pathname;

@@ -6,6 +6,7 @@ export function home({ state, content, registry, parts }) {
   if (parts.length) return null;
   const stats = sobriety(state.date);
   const [first, ...rest] = config.tagline.split(/(?<=\.)\s+/);
+  const start = registry.find(feature => feature.home?.placement === 'support');
   const trackerLabel = stats ? `${stats.days.toLocaleString()} calendar ${stats.days === 1 ? 'day' : 'days'} sober` :
     state.date ? 'View sobriety date' : 'Set a sobriety date';
   return { title: 'Today', html: `
@@ -30,11 +31,14 @@ export function home({ state, content, registry, parts }) {
         </span>
       </div>
     </section>
-    <a href="#/moment" class="moment-banner">
-      ${badge('pause', 'amber')}
-      <span class="card-copy"><strong>I Need a Moment</strong><span>Take a breath and find your next step.</span></span>
-      ${icon('arrow', 'card-arrow')}
-    </a>
+    <div class="today-support ${start ? 'card-grid' : ''}">
+      <a href="#/moment" class="moment-banner">
+        ${badge('pause', 'amber')}
+        <span class="card-copy"><strong>I Need a Moment</strong><span>Take a breath and find your next step.</span></span>
+        ${icon('arrow', 'card-arrow')}
+      </a>
+      ${start ? card({ ...start.home, href: `#/${start.id}`, symbol: start.icon }) : ''}
+    </div>
     <section class="home-section" aria-labelledby="daily-title">
       <h2 id="daily-title">Daily practice</h2>
       <div class="card-grid">${content.practices.map(item => card({
@@ -44,7 +48,7 @@ export function home({ state, content, registry, parts }) {
     </section>
     <section class="home-section" aria-labelledby="resource-title">
       <h2 id="resource-title">Recovery resources</h2>
-      <div class="card-grid">${registry.filter(feature => feature.home).map(feature => card({
+      <div class="card-grid">${registry.filter(feature => feature.home && !feature.home.placement).map(feature => card({
         ...feature.home, href: `#/${feature.id}`, symbol: feature.icon,
       })).join('')}</div>
     </section>

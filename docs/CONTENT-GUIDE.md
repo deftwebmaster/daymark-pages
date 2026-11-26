@@ -33,6 +33,8 @@ Each situation has `id`, `title`, optional `detailTitle`, `icon`, `tone`, `groun
 
 A practice has `id`, `title`, `short`, `intro`, `icon`, `tone` and ordered `sections`. Each section has a `title` and may have `text`, `questions`, `prayer` or `reading`. Practice questions are for reflection and the interface has no response fields.
 
+The New to Recovery guide uses the `newToRecovery` object. Each section has a `title`, `icon`, `tone`, `text` paragraphs, and `links`. It can also include an `example` and an ordered list of `actions`. Use a Daymark hash route for internal links and an HTTPS URL for source links. Keep the main guidance readable offline.
+
 ## Add a sponsor resource
 
 | Collection | Fields and location |
@@ -44,6 +46,12 @@ A practice has `id`, `title`, `short`, `intro`, `icon`, `tone` and ordered `sect
 | `resources` | `id`, `category`, `title`, `intro`, `sections`, `related`, optional `source` with `title` and `url`. Each section has a `title` and `text` paragraphs or `items`. |
 
 Use globally unique IDs across toolkit collections because related toolkit links resolve an ID across those collections. Use step or resource IDs in `related`, and prayer IDs in `prayers`. Each step guide’s text describes a possible approach. The official Twelve Steps are available through the linked A.A. source.
+
+## Add a Meeting Spark topic
+
+The `meetingSpark` library starts with the 57 original cards from the supplied Meeting Spark archive. A topic has a stable `id`, `title`, `category` and `style` keys from the two label maps, an `opening` question, and optional identifying `label` such as a step or tradition number. Its `questions` are discussion prompts. Keep topic wording original and suitable for sharing with a group.
+
+The deck and share timer work offline. Draw history, the current time, and chime choice live in the open tab. The timer uses a deadline so changing topics or leaving the page within Daymark preserves time. The screen wake lock and optional chime depend on browser support.
 
 ## Publish a content revision
 

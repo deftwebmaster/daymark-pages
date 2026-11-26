@@ -7,7 +7,7 @@ export const config = Object.freeze({
   tagline: 'One day. A better way.',
   site: 'https://steponeart24.com/',
   deployment: 'https://app.steponeart24.com/',
-  version: '1.1.0',
+  version: '1.3.0',
   themeColor: { light: '#f8f7ef', dark: '#151e19' },
 });
 

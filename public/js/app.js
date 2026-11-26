@@ -70,6 +70,7 @@ function render({ navigate = false } = {}) {
   app.page = show;
   main.innerHTML = show.html;
   main.removeAttribute('aria-busy');
+  show.mount?.(main, clipboard);
   if (navigate || !byId('sidebar').innerHTML) renderChrome(feature, current);
   document.title = `${show.title} · ${config.name}`;
   renderPrayerResults(context());

@@ -23,6 +23,7 @@ export function more({ parts }) {
   return { title: 'More', html: `${heading({ title: 'More' })}
     <div class="card-grid">${[
       ['settings', 'Settings', 'Choose preferences and manage local data.', 'settings'],
+      ['new-to-recovery', 'New to Recovery', 'Find a place to start with meetings, sponsorship, and daily practice.', 'leaf'],
       ['favorites', 'Favorites', 'Return to prayers and resources you’ve saved.', 'heart'],
       ['sobriety', 'Sobriety tracker', 'Dates, calendar days and milestones.', 'leaf'],
       ['practice', 'Daily Practice', 'Guided morning and evening reflections.', 'sunrise'],

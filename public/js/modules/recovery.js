@@ -1,5 +1,5 @@
 import { find } from '../core/content.js';
-import { card, escape, external, favoriteButton, heading, icon, list, paragraphs, readingSection, shareButton } from '../core/ui.js';
+import { badge, card, escape, external, favoriteButton, heading, icon, list, paragraphs, readingSection, shareButton } from '../core/ui.js';
 
 export function prayerLinks(ids, content) {
   return `<div class="card-grid">${ids.map(id => find(content.prayers, id)).filter(Boolean).map(prayer =>
@@ -11,6 +11,27 @@ export function readingLink(id, content) {
   if (!reading) return '';
   return card({ href: `#/toolkit/readings/${reading.id}`, title: reading.title,
     description: reading.reference, symbol: 'book', tone: 'amber' });
+}
+
+export function newToRecovery({ content, parts }) {
+  const guide = content.newToRecovery;
+  if (parts.length || !guide) return null;
+
+  return { title: guide.title, html: `<article class="reading newcomer-guide">
+    ${heading({ title: guide.title, intro: guide.intro, back: '#/today', backLabel: 'Today' })}
+    ${guide.sections.map(section => `<section class="reading-section">
+      <header class="newcomer-section-heading">
+        ${badge(section.icon, section.tone)}<h2>${escape(section.title)}</h2>
+      </header>
+      ${paragraphs(section.text)}
+      ${section.example ? `<blockquote><p>${escape(section.example)}</p></blockquote>` : ''}
+      ${section.actions ? list(section.actions, true) : ''}
+      <div class="actions">${section.links.map(link => link.href.startsWith('#/')
+        ? `<a class="button secondary" href="${escape(link.href)}">${escape(link.label)} ${icon('arrow')}</a>`
+        : external(link.href, link.label)).join('')}</div>
+    </section>`).join('')}
+    ${card({ href: '#/moment', title: 'I Need a Moment', description: 'Find a next step for what you’re feeling right now.', symbol: 'pause', tone: 'amber' })}
+    </article>` };
 }
 
 export function moments({ content, parts }) {

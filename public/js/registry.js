@@ -1,6 +1,7 @@
 import { home, tracker } from './modules/today.js';
 import { prayers } from './modules/prayers.js';
-import { moments, practice } from './modules/recovery.js';
+import { moments, newToRecovery, practice } from './modules/recovery.js';
+import { meetingSpark } from './modules/meeting-spark.js';
 import { toolkit } from './modules/toolkit.js';
 import { about, favorites, more, privacy, settings } from './modules/settings.js';
 
@@ -10,9 +11,12 @@ export const registry = [
     home: { title: 'Prayer Library', description: 'Words for the days you need them.', tone: 'sage' } },
   { id: 'toolkit', name: 'Toolkit', icon: 'toolkit', nav: 'toolkit', primary: true, enabled: true, render: toolkit,
     home: { title: 'Sponsor Toolkit', description: 'Work the Steps together.', tone: 'clay' } },
+  { id: 'meeting-spark', name: 'Meeting Spark', icon: 'people', nav: 'toolkit', enabled: true, render: meetingSpark },
   { id: 'more', name: 'More', icon: 'more', nav: 'more', primary: true, enabled: true, render: more },
   { id: 'sobriety', name: 'Sobriety', icon: 'leaf', nav: 'today', enabled: true, render: tracker },
   { id: 'practice', name: 'Daily Practice', icon: 'sunrise', nav: 'today', enabled: true, render: practice },
+  { id: 'new-to-recovery', name: 'New to Recovery', icon: 'leaf', nav: 'today', enabled: true, render: newToRecovery,
+    home: { placement: 'support', title: 'New to Recovery', description: 'Meetings, sponsorship, and a simple daily practice.', tone: 'sage' } },
   { id: 'moment', name: 'I Need a Moment', icon: 'pause', enabled: true, render: moments },
   { id: 'settings', name: 'Settings', icon: 'settings', nav: 'more', enabled: true, render: settings },
   { id: 'favorites', name: 'Favorites', icon: 'heart', nav: 'more', enabled: true, render: favorites },

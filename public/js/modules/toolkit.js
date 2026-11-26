@@ -21,11 +21,16 @@ function resourceLinks(ids, content) {
     card({ href: `#/${item.route}`, title: toolkitTitle(item), symbol: symbols[item.group] ?? 'toolkit' })).join('')}</div>`;
 }
 
-export function toolkit({ content, parts, state }) {
+export function toolkit({ content, parts, registry, state }) {
   if (!parts.length) {
+    const spark = registry.find(feature => feature.id === 'meeting-spark');
     return { title: 'Sponsor Toolkit', html: `
       ${heading({ title: 'Sponsor Toolkit', intro: 'Reading, questions and practical exercises for working the Steps together.' })}
-      <div class="card-grid toolkit-grid">${content.toolkitGroups.map(group => card({ ...group, href: `#/toolkit/${group.id}`, symbol: group.icon })).join('')}</div>` };
+      <div class="card-grid toolkit-grid">
+        ${spark && content.meetingSpark ? card({ href: `#/${spark.id}`, title: spark.name, symbol: spark.icon,
+          tone: 'amber', description: 'Pick a meeting topic and time shares.' }) : ''}
+        ${content.toolkitGroups.map(group => card({ ...group, href: `#/toolkit/${group.id}`, symbol: group.icon })).join('')}
+      </div>` };
   }
 
   const [groupId, id] = parts;

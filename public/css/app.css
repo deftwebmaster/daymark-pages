@@ -223,10 +223,11 @@ main { padding-block: 1.5rem 2rem; min-block-size: 55vh; }
 .tone-lavender { background: var(--lavender); color: var(--lavender-ink); }
 .tone-clay { background: var(--clay); color: var(--clay-ink); }
 .card-arrow { color: var(--green); inline-size: 1.05rem; block-size: 1.05rem; margin-inline-start: auto; }
+.today-support { margin-block-start: 1rem; }
 .moment-banner {
-  background: var(--moment); border-color: var(--moment-line); padding: .68rem .83rem; margin-block-start: 1rem;
+  background: var(--moment); border-color: var(--moment-line); padding: .68rem .83rem;
 }
-.moment-banner .card-copy strong { font-size: 1.07rem; }
+.today-support .card-copy strong { font-size: 1.07rem; }
 .welcome { margin-block-start: 1.5rem; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .75rem; }
 .welcome p { color: var(--muted); margin-block-start: .45rem; }
 
@@ -247,6 +248,41 @@ main { padding-block: 1.5rem 2rem; min-block-size: 55vh; }
 .reading-section > :not(:first-child), .panel > :not(:first-child) { margin-block-start: .62rem; }
 .reading-section h2, .panel h2, .support-panel h2 { font-size: clamp(1.32rem, 3.4vw, 1.65rem); }
 .reading-section .external { display: inline-flex; gap: .27rem; align-items: center; flex-wrap: wrap; min-block-size: 2.75rem; }
+.newcomer-section-heading { display: flex; align-items: center; gap: .65rem; }
+.newcomer-guide blockquote {
+  margin-inline: 0; margin-block-end: 0; padding: .65rem .9rem;
+  border-inline-start: .2rem solid var(--strong-line); border-radius: .45rem; background: var(--hover);
+}
+.newcomer-guide .actions { column-gap: 1rem; }
+.meeting-spark { max-inline-size: 62rem; }
+.spark-layout, .spark-filters { display: grid; gap: .85rem; }
+.spark-filters { grid-template-columns: repeat(auto-fit, minmax(min(100%, 7.5rem), 1fr)); }
+.spark-deck-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .25rem; }
+.spark-deck-heading .spark-timer-jump { padding-inline: .35rem; }
+.spark-layout > .reading-section { min-inline-size: 0; margin-block-end: 0; }
+.reading .spark-count { font-size: .85rem; }
+.spark-topic {
+  min-block-size: 13rem; padding: clamp(.85rem, 2.8vw, 1.4rem);
+  border: 1px solid var(--moment-line); border-radius: .85rem;
+  background: linear-gradient(145deg, var(--moment), var(--surface) 90%);
+}
+.spark-topic h3 {
+  margin-block: .2rem .6rem; font: 400 clamp(1.65rem, 4vw, 2.55rem)/1.04 var(--display);
+  letter-spacing: -.04em; overflow-wrap: anywhere;
+}
+.spark-topic .spark-opening { margin-block-end: .8rem; font-weight: 640; }
+.spark-topic .reading-list { color: var(--muted); }
+.spark-timer { scroll-margin-block-start: 1rem; }
+.spark-timer-face {
+  text-align: center; border-radius: .75rem; padding: .65rem .35rem;
+  background: var(--amber); color: var(--amber-ink);
+}
+.spark-time {
+  font-size: clamp(2.35rem, 8vw, 3.75rem); line-height: 1.15;
+  letter-spacing: -.055em; font-variant-numeric: tabular-nums; font-weight: 640;
+}
+.spark-timer-status { font-size: .84rem; font-weight: 650; }
+.spark-timer[data-phase="finished"] .spark-timer-face { background: var(--sage); color: var(--sage-ink); }
 .about-mission { display: grid; grid-template-columns: minmax(0, 10.5rem) minmax(0, 1fr); align-items: center; gap: 1.15rem; }
 .about-mission .organization-seal { inline-size: 100%; padding: .25rem; border-radius: .8rem; }
 .about-mission > .about-mission-copy { margin-block-start: 0; }
@@ -372,6 +408,11 @@ dialog textarea { resize: vertical; }
     inline-size: var(--hero-seal-size); margin: 0; padding: .3rem; border-radius: .95rem;
   }
 }
+@media (min-width: 64rem) {
+  .spark-layout { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); align-items: start; }
+  .spark-timer { position: sticky; inset-block-start: 1rem; }
+  .spark-timer-jump { display: none; }
+}
 @media (min-width: 54rem) {
   html { scroll-padding-block-end: 1rem; }
   .workspace { margin-inline-start: max(var(--sidebar-width), calc((100% - var(--page-width) + var(--sidebar-width) - 2 * var(--gutter)) / 2)); inline-size: min(calc(100% - var(--sidebar-width)), calc(var(--page-width) + 2 * var(--gutter))); }
@@ -406,6 +447,7 @@ dialog textarea { resize: vertical; }
 }
 @media (max-width: 36rem) {
   .card-grid { grid-template-columns: minmax(0,1fr); }
+  .spark-filters { gap: .55rem; }
   .about-mission { grid-template-columns: minmax(0, 1fr); }
   .about-mission .organization-seal { inline-size: min(100%, 10rem); justify-self: center; }
   .hero::after {
