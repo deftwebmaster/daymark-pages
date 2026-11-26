@@ -1,13 +1,13 @@
 // Increment CACHE_VERSION for each deployed change to an app shell file or the content.
-const CACHE_VERSION = '1.1.0-2';
+const CACHE_VERSION = '1.2.0-1';
 const scope = self.registration.scope;
 const prefix = `daymark:${scope}:`;
 const cacheName = prefix + CACHE_VERSION;
 const shell = [
   '', 'offline.html', 'manifest.webmanifest', 'css/app.css',
-  'assets/icons/mark.svg', 'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
-  'assets/icons/maskable-512.png', 'assets/icons/apple-touch.png', 'assets/images/daybreak.jpg',
-  'assets/icons/steponeart-mountains.webp',
+  'assets/icons/mountains-favicon-64.png', 'assets/icons/mountains-192.png', 'assets/icons/mountains-512.png',
+  'assets/icons/mountains-maskable-512.png', 'assets/icons/mountains-apple-180.png',
+  'assets/icons/steponeart-mountains.webp', 'assets/images/daybreak.jpg',
   'assets/images/steponeart-logo.webp', 'assets/images/steponeart-artwork.webp',
   'js/theme.js', 'js/config.js', 'js/app.js', 'js/registry.js',
   'js/core/content.js', 'js/core/dates.js', 'js/core/storage.js', 'js/core/ui.js',

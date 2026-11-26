@@ -1,6 +1,6 @@
 # Editorial review before publication
 
-John’s review covers product copy, Daymark-written prayers, and recovery guidance. In the project conversation on November 25, 2026, the user confirmed that John has written permission for the A.A. prayer content and separately cleared the Serenity Prayer. The library now includes six source entries with readable text, nine Daymark-written prayer pairs, and one historical reference awaiting review.
+John’s review covers product copy, Daymark-written prayers, and recovery guidance. In the project conversation on November 25, 2026, the user confirmed permission for the A.A. prayer content, the Serenity Prayer, and the Prayer of St. Francis. The library includes seven source entries with readable text and nine Daymark-written prayer pairs.
 
 ## Source prayer text
 
@@ -12,11 +12,11 @@ John’s review covers product copy, Daymark-written prayers, and recovery guida
 | Resentment Prayer | *Alcoholics Anonymous*, fourth edition, p. 67 | One-line prayer excerpt from the inventory discussion. |
 | Fear Prayer | *Alcoholics Anonymous*, fourth edition, p. 68 | Verbatim excerpt describing the prayer in the inventory discussion. |
 | Serenity Prayer | Common short form, attributed to Reinhold Niebuhr | Short prayer with attribution and a link to the A.A. General Service Office historical summary. |
-| Eleventh Step Prayer | *Twelve Steps and Twelve Traditions*, Step Eleven, p. 99 | Source link and a Daymark companion, Prayer for Listening. The exact English wording of the Peace Prayer traditionally associated with St. Francis remains open for rights review. |
+| Eleventh Step Prayer | *Twelve Steps and Twelve Traditions*, Step Eleven, p. 99 | Full English wording of the Peace Prayer traditionally associated with St. Francis, with source credit and a separately written Daymark companion, Prayer for Listening. |
 
 The Third and Seventh Step prayers were transcribed from the existing Stepwise Sponsorship App project and checked against their cited Big Book pages. The excerpts retain the published wording. Historical entries link to independently written Daymark companions. Rights for any future adaptations remain separate.
 
-Keep John’s written permission with the release records and confirm that any required credit, territory, and in-app display and offline-use terms are reflected in the release. A.A.W.S. says it cannot grant reprint permission for the Serenity Prayer or St. Francis Prayer. Verify the exact English version and its clearance before including the St. Francis text. [A.A.W.S. Content Use Policy](https://www.aa.org/terms-of-use)
+Keep the written permissions with the release records, including any required credit, territory, and in-app display and offline-use terms. A.A.W.S. distinguishes the Serenity and St. Francis prayers from works it can license. [A.A.W.S. Content Use Policy](https://www.aa.org/terms-of-use)
 
 [How It Works](https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt5.pdf) · [Into Action](https://www.aa.org/sites/default/files/2021-11/en_bigbook_chapt6.pdf) · [Serenity Prayer historical summary](https://www.aa.org/origin-serenity-prayer-brief-summary) · [Step Eleven](https://www.aa.org/sites/default/files/2022-01/en_step11.pdf)
 

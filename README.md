@@ -65,6 +65,6 @@ The browser downloads the app shell and library during the initial service worke
 - Checked Chromium install eligibility and manifest validation, an offline deep-link reload, and a two-version service worker update that preserved local data.
 - Checked keyboard navigation and focus, light and dark themes, narrow and landscape layouts, enlarged reading text, and calendar calculations across daylight saving transitions and leap years.
 - Physical-device installation, VoiceOver and TalkBack walkthroughs, and production-origin smoke tests remain release checks. Native sharing varies by browser. The app offers clipboard and manual copying where needed.
-- The library includes cleared prayer text and excerpts, the short Serenity Prayer, and original Daymark companion prayers. The historical Step Eleven wording remains linked for reference while its exact English version is under review. The initial emergency and crisis numbers are labeled for the United States. See the [editorial review](docs/EDITORIAL-REVIEW.md).
+- The library includes cleared prayer text and excerpts, the short Serenity Prayer, the Step Eleven Peace Prayer, and original Daymark companion prayers. The initial emergency and crisis numbers are labeled for the United States. See the [editorial review](docs/EDITORIAL-REVIEW.md).
 
 [Implementation plan](docs/IMPLEMENTATION-PLAN.md) · [Roadmap](docs/ROADMAP.md)

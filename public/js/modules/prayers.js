@@ -89,7 +89,7 @@ export function renderPrayerResults({ content, state, filters }) {
     if (filters.category && !item.categories.includes(filters.category)) return false;
     if (filters.favorites && !state.favorites.includes(`prayers/${item.id}`)) return false;
     const body = canRead(item) ? [...(item.original ?? []), ...(item.modern ?? [])] : [];
-    const searchable = [item.title, item.source?.title, ...body,
+    const searchable = [item.title, item.source?.title, item.source?.note, ...body,
       ...item.categories.map(id => content.prayerCategories[id])].join(' ').toLowerCase();
     return terms.every(term => searchable.includes(term));
   });

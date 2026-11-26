@@ -8,14 +8,14 @@ Put the record in `prayers`. Use category IDs from `prayerCategories`. Use array
 
 ```json
 {
-  "id": "eleventh-step-prayer",
-  "title": "Eleventh Step Prayer",
+  "id": "reference-prayer-example",
+  "title": "Example prayer awaiting clearance",
   "categories": ["step-prayers"],
   "step": 11,
   "source": {
-    "title": "Twelve Steps and Twelve Traditions",
-    "page": "99",
-    "url": "https://www.aa.org/sites/default/files/2022-01/en_step11.pdf",
+    "title": "Source publication",
+    "page": null,
+    "url": null,
     "rightsStatus": "requires-review"
   },
   "original": null,
