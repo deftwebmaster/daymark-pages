@@ -211,17 +211,16 @@ async function clipboard(value, label, origin) {
   }
 }
 
-async function share(origin) {
-  const url = shareURL(location.hash.slice(1));
+async function share(origin, data) {
   if (navigator.share) {
     try {
-      await navigator.share({ title: app.page.shareTitle, url });
+      await navigator.share(data);
       return;
     } catch (error) {
       if (error.name === 'AbortError') return;
     }
   }
-  await clipboard(url, 'Link copied.', origin);
+  await clipboard(data.url, 'Link copied.', origin);
 }
 
 const actions = {
@@ -247,7 +246,8 @@ const actions = {
     trigger.setAttribute('aria-pressed', String(saved));
     announce(saved ? 'Added to favorites.' : 'Removed from favorites.');
   },
-  share,
+  share: trigger => share(trigger, { title: app.page.shareTitle, url: shareURL(location.hash.slice(1)) }),
+  'share-app': trigger => share(trigger, { title: `${config.name} by ${config.organization}`, url: config.deployment }),
   'copy-prayer': trigger => clipboard(app.page.copyText, 'Text copied.', trigger),
   print: () => window.print(),
   'dismiss-dialog': () => dialog.close(),

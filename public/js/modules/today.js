@@ -12,7 +12,10 @@ export function home({ state, content, registry, parts }) {
   return { title: 'Today', html: `
     <div class="today-heading">
       <p class="eyebrow">${icon('calendar')} <time datetime="${today()}">${escape(formatDate(today(), { weekday: 'long', month: 'long', day: 'numeric' }))}</time></p>
-      <h1>Today</h1>
+      <div class="today-heading-row">
+        <h1>Today</h1>
+        <button class="button secondary today-share no-print" type="button" data-action="share-app">${icon('share')} Share ${escape(config.name)}</button>
+      </div>
     </div>
     <section class="hero" aria-label="Your day in recovery">
       <div class="hero-inner">

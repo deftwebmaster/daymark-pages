@@ -1,5 +1,5 @@
 // Increment CACHE_VERSION for each deployed change to an app shell file or the content.
-const CACHE_VERSION = '1.4.0-3';
+const CACHE_VERSION = '1.4.0-4';
 const scope = self.registration.scope;
 const prefix = `daymark:${scope}:`;
 const cacheName = prefix + CACHE_VERSION;

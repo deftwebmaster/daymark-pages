@@ -157,6 +157,7 @@ main { padding-block: 1.5rem 2rem; min-block-size: 55vh; }
 }
 .eyebrow .icon { inline-size: 1rem; block-size: 1rem; }
 .today-heading { margin-block-end: 1.1rem; }
+.today-heading-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1rem; }
 .hero {
   position: relative; overflow: hidden; isolation: isolate; container-type: inline-size;
   border-radius: 1.35rem; color: #fffdf0;
@@ -346,6 +347,7 @@ progress { display: block; inline-size: 100%; block-size: .8rem; accent-color: v
 }
 .button .icon { inline-size: 1.08rem; block-size: 1.08rem; }
 .button.secondary { border-color: var(--strong-line); background: var(--surface); color: var(--green); }
+.button.today-share { border-radius: 999px; background: var(--sage); color: var(--sage-ink); }
 .button.quiet { border-color: transparent; background: transparent; color: var(--green); }
 .button.danger { border-color: var(--error); background: var(--surface); color: var(--error); }
 .button[aria-pressed="true"] { background: var(--sage); color: var(--sage-ink); border-color: var(--strong-line); }
