@@ -89,3 +89,11 @@ export function durationLabel(stats) {
   return [stats.years && plural(stats.years, 'year'), stats.months && plural(stats.months, 'month'),
     (stats.remainder || (!stats.years && !stats.months)) && plural(stats.remainder, 'day')].filter(Boolean).join(', ');
 }
+
+export function daypart(date = new Date()) {
+  const hour = date.getHours();
+  if (hour >= 5 && hour < 12) return 'morning';
+  if (hour >= 12 && hour < 17) return 'afternoon';
+  if (hour >= 17 && hour < 21) return 'evening';
+  return 'night';
+}

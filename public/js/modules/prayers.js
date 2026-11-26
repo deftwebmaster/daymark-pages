@@ -20,7 +20,7 @@ function sourceCard(source) {
     ${source.url ? external(source.url, 'Read the source') : ''}`);
 }
 
-function canRead(item) {
+export function canRead(item) {
   return item.source?.rightsStatus === 'original-daymark' ||
     (item.editorialStatus === 'published' && item.source?.rightsStatus === 'approved');
 }

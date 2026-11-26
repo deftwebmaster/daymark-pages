@@ -10,18 +10,30 @@ The browser requests the app shell for each direct link. Fragments remain in the
 
 ## Data
 
-Database `daymark-local`, version 1. Each store uses `id` as its key path.
+Database `daymark-local`, version 2. Each store uses `id` as its key path. The name predates the Newleaf rename and stays fixed so existing installs keep their data.
 
 | Store | Key | Value |
 | --- | --- | --- |
 | `profile` | `sobriety` | Local calendar date as `YYYY-MM-DD`. No record when unset. |
+| `profile` | `sponsor` | `{ name, phone }`. Name may be empty, phone needs three or more digits. No record when unset. |
 | `preferences` | `theme`, `language`, `size`, `motion`, `onboarding` | One setting per record, with bounded enums or a boolean |
 | `favorites` | Resource route path | Presence means saved |
+| `journal` | Local calendar date as `YYYY-MM-DD` | `{ id, gratitude: [up to 3 strings], reflection }`, one entry per day |
 | `metadata` | `schema` | Schema marker |
 
-The initial upgrade creates these stores. Add future stores by checking `oldVersion` in `onupgradeneeded`; preserve existing stores unless a deliberate, tested migration requires different handling. Updating a preference writes its individual key. Toggling a favorite reads and writes its key in one transaction. Restore and clear update all personal stores in one transaction, and tabs refresh data when they regain focus.
+Version 1 created `profile`, `preferences`, `favorites` and `metadata`. Version 2 adds `journal`. Add future stores by checking `oldVersion` in `onupgradeneeded`; preserve existing stores unless a deliberate, tested migration requires different handling. Updating a preference writes its individual key. Toggling a favorite reads and writes its key in one transaction. Restore and clear update all personal stores in one transaction, and tabs refresh data when they regain focus.
 
-The localStorage key `daymark.theme` is a synchronous copy for first paint. Successful database reads replace it with the authoritative theme. If IndexedDB cannot open, use an in-memory state with a visible notice. Backup version 1 uses `{ format, version, date, preferences, favorites }`. The reader validates dates, bounded preferences, favorite path shape, and size before accepting the file. Restoring a valid backup requires confirmation.
+The localStorage key `daymark.theme` is a synchronous copy for first paint. Successful database reads replace it with the authoritative theme. If IndexedDB cannot open, use an in-memory state with a visible notice. Backup version 2 uses `{ format, version, date, preferences, favorites, sponsor, journal }`. The reader still accepts version 1 files, which have no sponsor or journal. It validates dates, bounded preferences, favorite path shape, sponsor phone shape, journal entry dates and lengths, and a 4 MB size limit before accepting the file. Restoring a valid backup requires confirmation.
+
+## Visual system
+
+Headings use Fraunces, a variable serif under the SIL Open Font License, bundled in `public/assets/fonts` with its license so it works offline. Its `SOFT` and `WONK` axes give the wordmark and italic tagline their rounded, leafy character. Surfaces sit on a faint grain texture (`assets/images/grain.svg`) with layered shadow tokens. On phones the tab bar floats as a frosted pill.
+
+The growth mark (`js/core/growth.js`) is an SVG sprig that gains a leaf at 1, 7, 30, 60, 90, 180 and 270 days, 1 year, 18 months and 2 years, and blooms after two years. A ring around it fills toward the next milestone. The Today hero follows the local time of day (morning, afternoon, evening, night) with a greeting, a suggested practice and a tinted sky. These are CSS overlays on the single daybreak image, so no extra artwork is needed.
+
+Route changes use the View Transitions API where available, and cards rise in on arrival. Milestone days get drifting leaves. All motion stops when the device or the app's Motion setting asks for reduced motion. The CSP disallows inline `style` attributes, so dynamic values such as the breathing phase length are set through the CSSOM (`style.setProperty`).
+
+Milestone share cards are drawn on a canvas from the bundled artwork and fonts, previewed as the canvas itself (no `blob:` image URLs under the CSP), and shared through the Web Share API with a download fallback. They show the milestone only, never the sobriety date.
 
 ## Calendar model
 

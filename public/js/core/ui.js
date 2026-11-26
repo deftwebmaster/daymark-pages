@@ -26,7 +26,19 @@ const paths = {
   close: '<path d="m6 6 12 12M18 6 6 18"/>',
   people: '<circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M16 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 5"/>',
   phone: '<path d="M7 3H4c-1 10 7 18 17 17v-4l-5-2-2 2a12 12 0 0 1-6-6l2-2z"/>',
+  message: '<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8m-8 3h5"/>',
+  wind: '<path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h7"/>',
+  pen: '<path d="M4 20h4L19 9l-4-4L4 16zM13.5 6.5l4 4"/>',
+  trash: '<path d="M4 7h16M9 7V4h6v3m-9 0 1 13h10l1-13M10 11v6m4-6v6"/>',
+  image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 9"/>',
+  download: '<path d="M12 3v12m-5-5 5 5 5-5M4 21h16"/>',
 };
+
+const reducedMotion = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
+
+export function prefersReducedMotion() {
+  return Boolean(reducedMotion?.matches) || document.documentElement.dataset.motion === 'reduced';
+}
 
 export const escape = value => String(value ?? '').replace(/[&<>"']/g, character => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
@@ -81,4 +93,18 @@ export function favoriteButton(state, id) {
 
 export function shareButton(label = 'Share link') {
   return `<button class="button secondary" data-action="share">${icon('share')} ${escape(label)}</button>`;
+}
+
+export function telHref(phone) {
+  return String(phone ?? '').replace(/[^\d+]/g, '');
+}
+
+export function sponsorActions(sponsor, { compact = false } = {}) {
+  if (!sponsor) {
+    return `<button class="button secondary" type="button" data-action="edit-sponsor">${icon('phone')} Add your sponsor’s number</button>`;
+  }
+  const number = telHref(sponsor.phone);
+  const who = sponsor.name || 'my sponsor';
+  return `<a class="button" href="tel:${escape(number)}">${icon('phone')} Call ${escape(who)}</a>
+    <a class="button secondary" href="sms:${escape(number)}">${icon('message')} ${compact ? 'Text' : `Text ${escape(who)}`}</a>`;
 }

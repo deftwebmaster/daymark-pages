@@ -7,7 +7,7 @@ export const config = Object.freeze({
   tagline: 'Just for today. Keep growing.',
   site: 'https://steponeart24.com/',
   deployment: 'https://app.steponeart24.com/',
-  version: '1.4.0',
+  version: '1.5.0',
   themeColor: { light: '#f8f7ef', dark: '#151e19' },
 });
 

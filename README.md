@@ -28,10 +28,11 @@ Production is configured for [app.steponeart24.com](https://app.steponeart24.com
 | `public/js/config.js` | Product name, tagline, StepOneArt link, theme colors, deployment URL, app version |
 | `public/js/registry.js` | Feature IDs, navigation placement, home cards and renderers |
 | `public/js/app.js` | Hash routing, shell, actions, dialog, preference and PWA integration |
-| `public/js/core/` | Calendar dates, IndexedDB, validated backups, content loader and shared UI |
-| `public/js/modules/` | Today, tracker, prayers, guided practice, difficult moments, toolkit and settings |
+| `public/js/core/` | Calendar dates, time of day, IndexedDB, validated backups, content loader, growth mark and shared UI |
+| `public/js/modules/` | Today, tracker, milestone cards, prayers, guided practice, journal, breathing, difficult moments, toolkit and settings |
 | `public/content/library.json` | Versioned recovery library and source metadata |
-| `public/css/app.css` | Design tokens, adaptive layout, accessibility and print styles |
+| `public/css/app.css` | Design tokens, Fraunces type, motion, adaptive layout, accessibility and print styles |
+| `public/assets/fonts/` | Fraunces variable font files and their OFL license |
 | `public/sw.js` | Versioned offline shell, cache cleanup and user-controlled updates |
 
 [Architecture](docs/ARCHITECTURE.md) covers the design decisions and IndexedDB details. [Content guide](docs/CONTENT-GUIDE.md) covers schemas and editorial workflow.
@@ -53,7 +54,7 @@ The [daybreak artwork](public/assets/images/daybreak.jpg) was generated with bui
 
 ## Local data and PWA behavior
 
-The `daymark-local` IndexedDB database uses schema 1. The `profile` store holds the optional date, `preferences` holds individual settings, `favorites` holds stable resource keys, and `metadata` holds the schema marker. A synchronous localStorage theme hint avoids a color flash. IndexedDB is authoritative.
+The `daymark-local` IndexedDB database uses schema 2. The `profile` store holds the optional sobriety date and sponsor contact, `preferences` holds individual settings, `favorites` holds stable resource keys, `journal` holds one gratitude and inventory entry per day, and `metadata` holds the schema marker. The database keeps its original name so existing installs keep their data. A synchronous localStorage theme hint avoids a color flash. IndexedDB is authoritative.
 
 Personal data and JSON backups are unencrypted. Clearing site data or removing the app can erase it. If IndexedDB is unavailable, Newleaf displays a notice and keeps changes in memory for that visit. Import validates the file and replaces local data only after confirmation. It never uploads a file.
 

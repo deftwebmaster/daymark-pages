@@ -1,5 +1,6 @@
 import { find } from '../core/content.js';
-import { badge, card, escape, external, favoriteButton, heading, icon, list, paragraphs, readingSection, shareButton } from '../core/ui.js';
+import { badge, card, escape, external, favoriteButton, heading, icon, list, paragraphs, readingSection, shareButton, sponsorActions } from '../core/ui.js';
+import { breathePage, breathePanel, mountBreathe } from './breathe.js';
 
 export function prayerLinks(ids, content) {
   return `<div class="card-grid">${ids.map(id => find(content.prayers, id)).filter(Boolean).map(prayer =>
@@ -34,11 +35,21 @@ export function newToRecovery({ content, parts }) {
     </article>` };
 }
 
-export function moments({ content, parts }) {
+export function moments({ content, parts, state }) {
+  if (parts.length === 1 && parts[0] === 'breathe') return { ...breathePage(), mount: mountBreathe };
   if (!parts.length) {
-    return { title: 'I Need a Moment', html: `<div class="moment-layout">
+    return { title: 'I Need a Moment', mount: mountBreathe, html: `<div class="moment-layout">
       ${heading({ title: 'What’s happening right now?', intro: 'Choose what fits this moment. You can start with one small action.',
         kicker: 'I Need a Moment', back: '#/today', backLabel: 'Today' })}
+      <div class="moment-first">
+        ${breathePanel({ compact: true })}
+        <section class="sponsor-panel" aria-labelledby="sponsor-title">
+          <h2 id="sponsor-title">${state.sponsor ? 'Reach out now' : 'Keep your sponsor close'}</h2>
+          <p>${state.sponsor ? 'A short call can change the direction of a day.' : 'Save a number once, then call or text in one tap. It stays on this device.'}</p>
+          <div class="actions">${sponsorActions(state.sponsor)}</div>
+        </section>
+      </div>
+      <h2 class="moment-choose">Or choose what fits</h2>
       <div class="card-grid moment-grid">${content.situations.map(item => card({
         href: `#/moment/${item.id}`, title: item.title, symbol: item.icon, tone: item.tone,
       })).join('')}</div></div>` };
@@ -58,7 +69,8 @@ export function moments({ content, parts }) {
     ${heading({ title, intro: item.grounding, back: '#/moment', backLabel: 'I Need a Moment' })}
     ${urgentHelp}
     ${readingSection('What you can do now', list(item.actions, true))}
-    ${readingSection('Reach out', paragraphs([item.connection]))}
+    ${readingSection('Reach out', `${paragraphs([item.connection])}<div class="actions">${sponsorActions(state.sponsor)}</div>`)}
+    ${card({ href: '#/moment/breathe', title: 'Breathe first', description: 'A minute of slow breathing before the next step.', symbol: 'wind', tone: 'lavender' })}
     ${readingSection('A principle to come back to', paragraphs([item.principle]))}
     ${readingSection('Prayers for this moment', prayerLinks(item.prayers, content))}
     ${readingSection('Suggested reading', readingLink(item.reading, content))}
@@ -81,5 +93,7 @@ export function practice({ parts, content, state }) {
     ${item.sections.map(section => readingSection(section.title,
       `${paragraphs(section.text ?? [])}${section.questions ? list(section.questions) : ''}
       ${section.reading ? readingLink(section.reading, content) : ''}${section.prayer ? prayerLinks([section.prayer], content) : ''}`)).join('')}
+    ${card({ href: '#/journal', title: item.id === 'evening' ? 'Write tonight’s inventory' : 'Open your journal', symbol: 'pen', tone: 'clay',
+      description: 'Three gratitudes and a few honest lines, kept on this device.' })}
     </article>` };
 }

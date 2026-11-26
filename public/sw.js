@@ -1,5 +1,5 @@
 // Increment CACHE_VERSION for each deployed change to an app shell file or the content.
-const CACHE_VERSION = '1.4.1-2';
+const CACHE_VERSION = '1.5.0-1';
 const scope = self.registration.scope;
 const prefix = `daymark:${scope}:`;
 const cacheName = prefix + CACHE_VERSION;
@@ -7,12 +7,14 @@ const shell = [
   '', 'offline.html', 'manifest.webmanifest', 'css/app.css',
   'assets/icons/newleaf-favicon-64.png', 'assets/icons/newleaf-192.png', 'assets/icons/newleaf-512.png',
   'assets/icons/newleaf-maskable-512.png', 'assets/icons/newleaf-apple-180.png', 'assets/images/daybreak.jpg',
-  'assets/images/steponeart-logo.webp', 'assets/images/steponeart-artwork.webp',
+  'assets/images/steponeart-logo.webp', 'assets/images/steponeart-artwork.webp', 'assets/images/grain.svg',
+  'assets/fonts/fraunces-latin-full-normal.woff2', 'assets/fonts/fraunces-latin-full-italic.woff2',
   'js/theme.js', 'js/config.js', 'js/app.js', 'js/registry.js',
-  'js/core/content.js', 'js/core/dates.js', 'js/core/storage.js', 'js/core/ui.js',
+  'js/core/content.js', 'js/core/dates.js', 'js/core/growth.js', 'js/core/storage.js', 'js/core/ui.js',
   'js/modules/today.js', 'js/modules/prayers.js', 'js/modules/recovery.js',
   'js/modules/toolkit.js', 'js/modules/settings.js', 'js/modules/meeting-spark.js',
-  'js/modules/share-timer.js', 'content/library.json',
+  'js/modules/share-timer.js', 'js/modules/breathe.js', 'js/modules/journal.js', 'js/modules/milestone-card.js',
+  'content/library.json',
 ];
 const assetURLs = new Set(shell.map(path => new URL(path, scope).href));
 const indexPath = new URL('index.html', scope).pathname;

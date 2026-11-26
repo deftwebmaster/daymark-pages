@@ -1,17 +1,19 @@
 import { config, shareURL } from './config.js';
 import { loadContent } from './core/content.js';
-import { formatDate, today } from './core/dates.js';
+import { daypart, formatDate, today } from './core/dates.js';
 import { applyPreferences, downloadBackup, openStorage, readBackup } from './core/storage.js';
-import { escape, heading, icon } from './core/ui.js';
+import { escape, heading, icon, prefersReducedMotion } from './core/ui.js';
 import { navigation, registry } from './registry.js';
 import { renderPrayerResults } from './modules/prayers.js';
 import { preferenceField } from './modules/settings.js';
+import { readEntry } from './modules/journal.js';
 
 const byId = id => document.getElementById(id);
 const main = byId('main');
 const dialog = byId('dialog');
 const filters = { query: '', category: '', favorites: false };
-const app = { content: null, storage: null, page: null, installPrompt: null, update: null, pwaStatus: '', date: today() };
+const app = { content: null, storage: null, page: null, installPrompt: null, update: null, pwaStatus: '', offlineUnavailable: false, date: today(), daypart: daypart() };
+let enterTimer;
 const scheme = matchMedia('(prefers-color-scheme: dark)');
 const pending = new WeakSet();
 let toastTimer;
@@ -19,7 +21,8 @@ let dialogOrigin;
 let dialogSubmit;
 
 function context(parts = []) {
-  return { parts, registry, filters, content: app.content, state: app.storage.state, installable: Boolean(app.installPrompt) };
+  return { parts, registry, filters, content: app.content, state: app.storage.state, installable: Boolean(app.installPrompt),
+    offlineUnavailable: app.offlineUnavailable };
 }
 
 function route() {
@@ -76,6 +79,12 @@ function render({ navigate = false } = {}) {
   renderPrayerResults(context());
 
   if (navigate) {
+    clearTimeout(enterTimer);
+    if (prefersReducedMotion()) delete main.dataset.enter;
+    else {
+      main.dataset.enter = '';
+      enterTimer = setTimeout(() => { delete main.dataset.enter; }, 900);
+    }
     byId('toast').hidden = true;
     window.scrollTo(0, 0);
     main.focus({ preventScroll: true });
@@ -232,6 +241,32 @@ const actions = {
     main.focus({ preventScroll: true });
   },
   'edit-date': editDate,
+  'delete-entry': trigger => openDialog({
+    title: 'Delete this entry?', body: '<p>This journal entry will be removed from this device. This can’t be undone unless you have a backup.</p>',
+    origin: trigger, confirm: 'Delete entry', danger: true, submit: async () => {
+      await app.storage.deleteEntry(trigger.dataset.id);
+      announce('Journal entry deleted.');
+      if (location.hash !== '#/journal') location.hash = '#/journal';
+    },
+  }),
+  'edit-sponsor': trigger => {
+    const sponsor = app.storage.state.sponsor;
+    openDialog({ title: sponsor ? 'Edit sponsor contact' : 'Add your sponsor', confirm: 'Save contact', origin: trigger,
+      body: `<p>This stays on this device. It’s included in backups you export.</p>
+        <label class="field"><span>Name</span><input name="name" maxlength="60" autocomplete="off" value="${escape(sponsor?.name ?? '')}" placeholder="Optional" data-initial-focus></label>
+        <label class="field"><span>Phone number</span><input name="phone" type="tel" inputmode="tel" maxlength="24" autocomplete="off" required value="${escape(sponsor?.phone ?? '')}"></label>`,
+      submit: async data => {
+        await app.storage.update({ sponsor: { name: String(data.get('name')).trim(), phone: String(data.get('phone')).trim() } });
+        announce('Sponsor contact saved.');
+      } });
+  },
+  'remove-sponsor': trigger => openDialog({
+    title: 'Remove sponsor contact?', body: '<p>The name and number will be removed from this device.</p>', origin: trigger,
+    confirm: 'Remove', danger: true, submit: async () => {
+      await app.storage.update({ sponsor: null });
+      announce('Sponsor contact removed.');
+    },
+  }),
   'reset-date': () => openDialog({
     title: 'Reset sobriety date?', body: '<p>The current date will be removed. Your journey continues, and you can add a new date whenever you’re ready.</p>',
     confirm: 'Reset date', danger: true, submit: async () => {
@@ -258,7 +293,7 @@ const actions = {
     announce('Backup prepared.');
   },
   'clear-data': () => openDialog({
-    title: 'Clear personal data?', body: '<p>This removes your sobriety date, preferences and favorites. Export a backup first if you want to keep a copy.</p>',
+    title: 'Clear personal data?', body: '<p>This removes your sobriety date, sponsor contact, journal, preferences and favorites. Export a backup first if you want to keep a copy.</p>',
     confirm: 'Clear data', danger: true, submit: async () => {
       await app.storage.replace();
       setPreferences();
@@ -305,6 +340,23 @@ document.addEventListener('click', async event => {
   finally { pending.delete(trigger); }
 });
 
+main.addEventListener('submit', async event => {
+  if (event.target.id !== 'journal-form') return;
+  event.preventDefault();
+  const entry = readEntry(event.target);
+  if (!entry.reflection && !entry.gratitude.some(Boolean)) {
+    announce('Write a gratitude or a few lines before saving.');
+    return;
+  }
+  try {
+    await app.storage.saveEntry(entry);
+    announce('Journal entry saved.');
+    render();
+  } catch (error) {
+    announce(error?.message || 'The entry could not be saved.');
+  }
+});
+
 main.addEventListener('input', event => {
   if (event.target.name === 'prayer-search') {
     filters.query = event.target.value;
@@ -321,6 +373,10 @@ main.addEventListener('change', async event => {
     renderPrayerResults(context());
     return;
   }
+  if (name === 'journal-date') {
+    if (value && value <= today()) location.hash = `#/journal/${value}`;
+    return;
+  }
   try {
     if (target.id === 'import-file' && target.files[0]) {
       const origin = main.querySelector('[data-action="choose-import"]');
@@ -329,7 +385,7 @@ main.addEventListener('change', async event => {
       const next = await readBackup(file);
       if (!target.isConnected || dialog.open) return;
       openDialog({ title: 'Replace local data?',
-        body: '<p>The backup passed validation. Importing it replaces your current sobriety date, preferences and favorites.</p>',
+        body: '<p>The backup passed validation. Importing it replaces your current sobriety date, sponsor contact, journal, preferences and favorites.</p>',
         origin, confirm: 'Import backup',
         submit: async () => {
           await app.storage.replace(next);
@@ -361,13 +417,18 @@ window.addEventListener('hashchange', () => {
     if (next !== 'prayers' && !next.startsWith('prayers/')) Object.assign(filters, { query: '', category: '', favorites: false });
   }
   lastRoute = next;
-  render({ navigate: true });
+  const go = () => render({ navigate: true });
+  if (document.startViewTransition && !prefersReducedMotion() && !document.hidden) {
+    document.startViewTransition(go).ready.catch(() => { /* A newer navigation replaced this transition. */ });
+  } else go();
 });
 
 async function checkDay() {
   const date = today();
-  if (app.date !== date) {
+  const part = daypart();
+  if (app.date !== date || app.daypart !== part) {
     app.date = date;
+    app.daypart = part;
     if (['today', 'sobriety', 'settings'].includes(route()) && !dialog.open) render();
     const input = dialog.querySelector('[name="date"]');
     if (dialog.open && input) input.max = date;
@@ -423,8 +484,9 @@ async function startWorker() {
     watchInstallation();
     registration.addEventListener('updatefound', watchInstallation);
   } catch {
-    app.pwaStatus = 'Offline installation is unavailable in this browser.';
-    notices();
+    // Shown quietly in Settings instead of as a banner on every page.
+    app.offlineUnavailable = true;
+    if (route() === 'settings' && !dialog.open) render();
   }
 }
 
