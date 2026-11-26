@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "version": "1.4.0",
+  "version": "1.4.1",
   "prayerCategories": {
     "daily-practice": "Daily Practice",
     "step-prayers": "Step Prayers",
@@ -17,7 +17,7 @@
         "service-guidance"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -43,7 +43,7 @@
         "gratitude-acceptance"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -68,7 +68,7 @@
         "daily-practice"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -93,7 +93,7 @@
         "step-prayers"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -118,7 +118,7 @@
         "daily-practice"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -143,7 +143,7 @@
         "gratitude-acceptance"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -168,7 +168,7 @@
         "service-guidance"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -193,7 +193,7 @@
         "service-guidance"
       ],
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [
@@ -219,7 +219,7 @@
       ],
       "step": 11,
       "source": {
-        "title": "Daymark",
+        "title": "Newleaf",
         "rightsStatus": "original-daymark"
       },
       "original": [

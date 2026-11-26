@@ -25,7 +25,7 @@ Put the record in `prayers`. Use category IDs from `prayerCategories`. Use array
 }
 ```
 
-The interface can show Daymark-authored material with `source.rightsStatus: "original-daymark"`. The current authored prayers are marked `daymark-preview` for John’s review before publication. For external or historical material, the interface requires `editorialStatus: "published"` and `source.rightsStatus: "approved"` to show text. Record permission and attribution in editorial notes before adding text to the public JSON. Keep passages and adaptations out of shipped assets until cleared. Even a hidden JSON field is downloadable. If a prayer has one readable version, the app displays it regardless of the reader’s preferred language. Source credit accompanies copied text.
+The interface can show Newleaf-authored material with `source.rightsStatus: "original-daymark"`. The current authored prayers are marked `daymark-preview` for John’s review before publication. For external or historical material, the interface requires `editorialStatus: "published"` and `source.rightsStatus: "approved"` to show text. Record permission and attribution in editorial notes before adding text to the public JSON. Keep passages and adaptations out of shipped assets until cleared. Even a hidden JSON field is downloadable. If a prayer has one readable version, the app displays it regardless of the reader’s preferred language. Source credit accompanies copied text.
 
 ## Add a difficult moment or reflection
 
@@ -33,7 +33,7 @@ Each situation has `id`, `title`, optional `detailTitle`, `icon`, `tone`, `groun
 
 A practice has `id`, `title`, `short`, `intro`, `icon`, `tone` and ordered `sections`. Each section has a `title` and may have `text`, `questions`, `prayer` or `reading`. Practice questions are for reflection and the interface has no response fields.
 
-The New to Recovery guide uses the `newToRecovery` object. Each section has a `title`, `icon`, `tone`, `text` paragraphs, and `links`. It can also include an `example` and an ordered list of `actions`. Use a Daymark hash route for internal links and an HTTPS URL for source links. Keep the main guidance readable offline.
+The New to Recovery guide uses the `newToRecovery` object. Each section has a `title`, `icon`, `tone`, `text` paragraphs, and `links`. It can also include an `example` and an ordered list of `actions`. Use a Newleaf hash route for internal links and an HTTPS URL for source links. Keep the main guidance readable offline.
 
 ## Add a sponsor resource
 
@@ -51,7 +51,7 @@ Use globally unique IDs across toolkit collections because related toolkit links
 
 The `meetingSpark` library starts with the 57 original cards from the supplied Meeting Spark archive. A topic has a stable `id`, `title`, `category` and `style` keys from the two label maps, an `opening` question, and optional identifying `label` such as a step or tradition number. Its `questions` are discussion prompts. Keep topic wording original and suitable for sharing with a group.
 
-The deck and share timer work offline. Draw history, the current time, and chime choice live in the open tab. The timer uses a deadline so changing topics or leaving the page within Daymark preserves time. The screen wake lock and optional chime depend on browser support.
+The deck and share timer work offline. Draw history, the current time, and chime choice live in the open tab. The timer uses a deadline so changing topics or leaving the page within Newleaf preserves time. The screen wake lock and optional chime depend on browser support.
 
 ## Publish a content revision
 

@@ -36,7 +36,7 @@ function navLinks(active, current) {
 function renderChrome(feature, current) {
   const moment = feature?.id === 'moment';
   const brand = `<a class="wordmark" href="#/today" aria-label="${escape(config.name)} by ${escape(config.organization)} · Today">
-    <span class="wordmark-icon"><img src="${escape(config.brandMark)}" alt="" width="160" height="67"></span>
+    <span class="wordmark-icon"><img src="${escape(config.brandMark)}" alt="" width="192" height="192"></span>
     <span><strong>${escape(config.name)}</strong><small>by ${escape(config.organization)}</small></span></a>`;
   byId('sidebar').innerHTML = `${brand}<nav aria-label="Main navigation">${navLinks(feature?.nav, current)}</nav>
     ${moment ? '' : `<a class="side-moment" href="#/moment">${icon('pause')} <span>I Need a Moment</span></a>`}

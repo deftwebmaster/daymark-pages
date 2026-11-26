@@ -1,4 +1,4 @@
-# Daymark Version 1 implementation plan
+# Newleaf Version 1 implementation plan
 
 The starting checkout contained only Git metadata. Build a standalone static application under `public/`, the deployment directory.
 

@@ -48,7 +48,7 @@ export function downloadBackup(state) {
   const url = URL.createObjectURL(file);
   const link = document.createElement('a');
   link.href = url;
-  link.download = 'daymark-backup.json';
+  link.download = 'newleaf-backup.json';
   document.body.append(link);
   link.click();
   link.remove();

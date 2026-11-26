@@ -3,7 +3,7 @@
 ## Before public release
 
 - Approve app name, tagline, brand mark and mission copy with John.
-- Review Daymark-authored content with recovery and sponsorship readers. Resolve the historical prayer entries using the editorial review log.
+- Review Newleaf-authored content with recovery and sponsorship readers. Resolve the historical prayer entries using the editorial review log.
 - Confirm real-device installation and offline reopening on iOS and Android. Walk through keyboard, VoiceOver and TalkBack navigation.
 - After deployment authorization, verify the intended HTTPS origin, installability, deep links, updates, and offline content on that origin.
 

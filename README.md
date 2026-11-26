@@ -1,6 +1,6 @@
-# Daymark by StepOneArt
+# Newleaf by StepOneArt
 
-Daymark is a browser-local recovery companion for sobriety milestones, prayer, morning and evening reflection, difficult moments, and Twelve Step sponsorship. It runs from static files and works offline after its first successful online load.
+Newleaf is a browser-local recovery companion for sobriety milestones, prayer, morning and evening reflection, difficult moments, and Twelve Step sponsorship. It runs from static files and works offline after its first successful online load.
 
 ## Run locally
 
@@ -10,7 +10,7 @@ From this directory, serve `public/` with any static web server. For example:
 python3 -m http.server 8765 --bind 127.0.0.1 --directory public
 ```
 
-Open [Daymark locally](http://127.0.0.1:8765/). A local loopback address is a secure context for service workers. Use HTTPS for hosted or cross-device testing. Keep the hostname and port consistent to retain that browser profile’s data. The app has no build or install step.
+Open [Newleaf locally](http://127.0.0.1:8765/). A local loopback address is a secure context for service workers. Use HTTPS for hosted or cross-device testing. Keep the hostname and port consistent to retain that browser profile’s data. The app has no build or install step.
 
 ## Static hosting and Cloudflare Pages
 
@@ -39,7 +39,7 @@ Production is configured for [app.steponeart24.com](https://app.steponeart24.com
 ## Add content or features
 
 - Add a prayer in `prayers` with an immutable ID, category IDs, attribution, editorial status, optional text variants, and related prayer IDs. Keep unresolved historical text fields null.
-- Add a difficult moment in `situations` with a choice label, grounding copy, principle, Daymark prayers, reading ID, practical next actions and a connection prompt.
+- Add a difficult moment in `situations` with a choice label, grounding copy, principle, Newleaf prayers, reading ID, practical next actions and a connection prompt.
 - Add sponsor resources in `resources`, `readings` or `worksheets`. Assign the relevant category or step, and link the IDs from the appropriate step or other resource. The existing templates render shareable routes and print styles.
 - Add a feature by exporting its renderer and registering it in `registry.js`. The registry controls navigation and the Today resource cards. Add any new files to the worker’s shell list so they work offline.
 
@@ -55,7 +55,7 @@ The [daybreak artwork](public/assets/images/daybreak.jpg) was generated with bui
 
 The `daymark-local` IndexedDB database uses schema 1. The `profile` store holds the optional date, `preferences` holds individual settings, `favorites` holds stable resource keys, and `metadata` holds the schema marker. A synchronous localStorage theme hint avoids a color flash. IndexedDB is authoritative.
 
-Personal data and JSON backups are unencrypted. Clearing site data or removing the app can erase it. If IndexedDB is unavailable, Daymark displays a notice and keeps changes in memory for that visit. Import validates the file and replaces local data only after confirmation. It never uploads a file.
+Personal data and JSON backups are unencrypted. Clearing site data or removing the app can erase it. If IndexedDB is unavailable, Newleaf displays a notice and keeps changes in memory for that visit. Import validates the file and replaces local data only after confirmation. It never uploads a file.
 
 The browser downloads the app shell and library during the initial service worker installation. Subsequent updates prepare a complete cache and wait for **Reload to update**. Web links and phone services require their respective connections. Install instructions are in Settings. On iOS, open the app in Safari and use **Share → Add to Home Screen**.
 
@@ -65,6 +65,6 @@ The browser downloads the app shell and library during the initial service worke
 - Checked Chromium install eligibility and manifest validation, an offline deep-link reload, and a two-version service worker update that preserved local data.
 - Checked keyboard navigation and focus, light and dark themes, narrow and landscape layouts, enlarged reading text, and calendar calculations across daylight saving transitions and leap years.
 - Physical-device installation, VoiceOver and TalkBack walkthroughs, and production-origin smoke tests remain release checks. Native sharing varies by browser. The app offers clipboard and manual copying where needed.
-- The library includes cleared prayer text and excerpts, the short Serenity Prayer, the Step Eleven Peace Prayer, and original Daymark companion prayers. The initial emergency and crisis numbers are labeled for the United States. See the [editorial review](docs/EDITORIAL-REVIEW.md).
+- The library includes cleared prayer text and excerpts, the short Serenity Prayer, the Step Eleven Peace Prayer, and original Newleaf companion prayers. The initial emergency and crisis numbers are labeled for the United States. See the [editorial review](docs/EDITORIAL-REVIEW.md).
 
 [Implementation plan](docs/IMPLEMENTATION-PLAN.md) · [Roadmap](docs/ROADMAP.md)

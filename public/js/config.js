@@ -1,13 +1,13 @@
 export const config = Object.freeze({
-  name: 'Daymark',
+  name: 'Newleaf',
   organization: 'StepOneArt',
-  brandMark: './assets/icons/steponeart-mountains.webp',
+  brandMark: './assets/icons/newleaf-192.png',
   organizationLogo: './assets/images/steponeart-logo.webp',
   organizationArtwork: './assets/images/steponeart-artwork.webp',
-  tagline: 'One day. A better way.',
+  tagline: 'Just for today. Keep growing.',
   site: 'https://steponeart24.com/',
   deployment: 'https://app.steponeart24.com/',
-  version: '1.3.1',
+  version: '1.4.0',
   themeColor: { light: '#f8f7ef', dark: '#151e19' },
 });
 

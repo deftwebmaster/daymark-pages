@@ -112,9 +112,9 @@ button:disabled { opacity: .62; cursor: wait; }
 }
 .wordmark-icon {
   display: grid; place-items: center; flex: none; inline-size: 2.55rem; block-size: 2.55rem;
-  padding: .12rem; border: 1px solid #5e7d66; border-radius: .65rem; background: #234937;
+  overflow: hidden; border: 1px solid #5e7d66; border-radius: .65rem; background: #234937;
 }
-.wordmark-icon img { inline-size: 100%; block-size: auto; filter: invert(1) sepia(.25); }
+.wordmark-icon img { inline-size: 100%; block-size: auto; }
 .wordmark strong { display: block; font: 400 1.6rem/.98 var(--display); letter-spacing: -.05em; }
 .wordmark small { display: block; color: var(--muted); margin-block-start: .22rem; font-size: .7rem; font-weight: 620; }
 .icon-button {
@@ -176,7 +176,7 @@ main { padding-block: 1.5rem 2rem; min-block-size: 55vh; }
 .hero-title {
   grid-area: title;
   font: 400 clamp(2.65rem, 6.1vw, 4.7rem)/.98 var(--display); letter-spacing: -.06em;
-  margin-block: 0;
+  margin-block: 0; overflow-wrap: break-word;
 }
 .hero-title em { color: #d9e9b8; }
 .hero-intro { grid-area: intro; color: #f0f3e2; font-size: 1rem; margin-block-start: .9rem; max-inline-size: 39ch; text-wrap: pretty; }
@@ -455,6 +455,7 @@ dialog textarea { resize: vertical; }
   .hero::after {
     background: linear-gradient(90deg, #102b1ef8 0%, #102b1edd 42%, #142b1e34 75%, #142b1e12 100%);
   }
+  .hero-title { font-size: clamp(2.25rem, 12.3cqi, 2.65rem); }
   .preferences-grid { grid-template-columns: minmax(0,1fr); }
   .is-moment .topbar { min-block-size: calc(3.65rem + env(safe-area-inset-top)); }
   .is-moment main { padding-block-start: .75rem; }
